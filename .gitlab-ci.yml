@@ -1,0 +1,40 @@
+stages:
+  - deploy
+
+deploy_to_siteground:
+  stage: deploy
+  image: alpine:3.19
+  variables:
+    GIT_SUBMODULE_STRATEGY: recursive
+    SG_HOST: "c1117984.sgvps.net"
+    SG_PORT: "18765"
+    SG_USER: "u3-ejmxj5pdo7jf"
+    SG_PATH: "/home/customer/www/dev.sjd.es/public_html"
+  before_script:
+    - apk add --no-cache git-lfs rsync openssh-client
+    - git lfs install --skip-repo
+    - git lfs pull
+    - mkdir -p ~/.ssh
+    - echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_rsa
+    - chmod 600 ~/.ssh/id_rsa
+    - ssh-keyscan -p "$SG_PORT" "$SG_HOST" >> ~/.ssh/known_hosts
+  script:
+  - |
+    # Rsync seguro: excluye core y drop-ins, sube todo lo demás
+    rsync -rltD --no-perms --delete \
+      --exclude='.git/' \
+      --exclude='wp-admin/' \
+      --exclude='wp-includes/' \
+      --exclude='wp-content/advanced-cache.php' \
+      --exclude='wp-content/db.php' \
+      --exclude='wp-content/object-cache.php' \
+      -e "ssh -i ~/.ssh/id_rsa -p $SG_PORT" ./ $SG_USER@$SG_HOST:$SG_PATH
+  - |
+    # Ajustar permisos correctos en el servidor
+    ssh -i ~/.ssh/id_rsa -p $SG_PORT $SG_USER@$SG_HOST "
+      echo 'Corrigiendo permisos...'
+      find $SG_PATH -type d -exec chmod 755 {} \;
+      find $SG_PATH -type f -exec chmod 644 {} \;
+    "
+  rules:
+    - if: '$CI_COMMIT_BRANCH == "main"'

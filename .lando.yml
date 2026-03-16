@@ -1,0 +1,62 @@
+name: consorci
+recipe: wordpress
+config:
+  webroot: .
+  env: dev
+  via: apache
+  php: '8.2' 
+  xdebug: true
+  database: mysql
+
+services:
+  appserver:
+    type: php:8.2  
+    xdebug: true
+    build_as_root:
+      - apt-get update -qq
+    overrides:
+      environment:
+        WP_ENV: local
+        PHP_IDE_CONFIG: "serverName=consorci.lndo.site"
+
+  database:
+    type: mysql:5.7
+    portforward: true
+
+  pma:
+    type: phpmyadmin
+
+  mailhog:
+    type: mailhog
+    hogfrom:
+      - appserver
+
+tooling:
+  composer:
+    service: appserver
+  install-wordpress:
+    service: appserver
+    cmd:
+      - wp core download
+      - wp config create --dbname=wordpress --dbuser=wordpress --dbpass=wordpress --dbhost=database
+      - wp db create
+      - wp core install --url="http://consorci.lndo.site" --title="consorci" --admin_user=admin --admin_password=#Sara0307! --admin_email=daniel@paladini.cat
+
+proxy:
+  pma:
+    - pma.consorci.lndo.site
+  mailhog:
+    - mail.consorci.lndo.site
+
+events:
+  post-db-import:
+    - wp --path=public_html search-replace "wordpress.l" "consorci.lndo.site" --all-tables --verbose --skip-columns=guid
+    - wp --path=public_html plugin deactivate wp-rocket
+    - wp --path=public_html plugin update --all && wp --path=public_html language plugin update --all && wp --path=public_html theme update --all && wp --path=public_html language theme update --all && wp --path=public_html core update --force && wp --path=public_html language core update
+
+excludes:
+  - wp-content/uploads
+  - wp-content/cache
+  - wp-content/upgrade
+  - wp-content/languages
+  - sql
