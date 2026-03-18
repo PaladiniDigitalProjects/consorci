@@ -1,0 +1,22 @@
+# Directories
+/packages export-ignore
+/.gutenberghub export-ignore
+/lib export-ignore
+/src export-ignore
+
+
+# Files
+/.gitattributes export-ignore
+/.gitignore export-ignore
+/.prettierignore export-ignore
+/.prettierrc.js export-ignore
+/.wp-env.json export-ignore
+/composer.json export-ignore
+/composer.lock export-ignore
+/cypress.json export-ignore
+/lerna.json export-ignore
+/package-lock.json export-ignore
+/package.json export-ignore
+/ruleset.xml export-ignore
+/webpack.config.js export-ignore
+.DS_Store export-ignore

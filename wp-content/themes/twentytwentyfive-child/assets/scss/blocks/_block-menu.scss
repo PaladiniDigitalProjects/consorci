@@ -1,0 +1,144 @@
+// .wp-block-menu{
+//   position: relative;
+//   text-align: center !important;
+//   width: 100vw;
+//   left: 50%;
+//   left: calc(50% - 50vw);
+//   padding: 1rem;
+
+//   .semana {
+//     display: flex;
+//     flex-direction: column;
+//     position: relative;
+
+//     .menu-dia {
+//       margin: 1rem;
+//       border-radius: 0.8rem;
+//       padding: 1rem;
+//       background: $crema;
+
+//     .menu-title {
+//       margin: 2rem 0;
+//       @include font-size(28);
+//     }
+
+//     p {
+//       @include font-size(16);
+//       font-family: $fp-bold;
+//     }
+
+//     ul{
+//       margin-bottom: 2rem;
+//       padding-left: 1rem;
+//       li {
+//         line-height: 1.6;
+//         margin-bottom: 1rem;
+//         }
+//       }
+//     }
+//   }
+
+//   .menu-desalluno-merienda {
+//     display: flex;
+//     flex-direction: column;
+//   }
+
+//   .consejo {
+//     display: flex;
+//     flex-direction:column;
+//     .menu-consejo {
+//       order:2;
+//       text-align: left;
+//     }
+
+//     .menu-descargar {
+//       order:1;
+//       padding: 10rem 0;
+//       background: $crema;
+//       height: 35rem;
+//       margin-top: 6rem;
+//       border-radius:1rem;
+//       display: flex;
+//       flex-direction: column;
+//       align-content:center;
+
+//       .button {
+//         margin-top: 2rem;
+//         padding: 0.5rem 2rem 0.3rem;
+//       }
+
+//       div img {
+//         max-width: 6rem;
+//         margin:1rem auto;
+//         display: block;
+//       }
+//     }
+//   }
+
+//   // end menu dia
+
+//   p {
+//     text-align: center !important;
+//   }
+
+//   ul {
+//     display: block;
+//     margin-bottom: 3rem;
+//     li {
+//       margin-bottom: 2rem;
+//     }
+//   }
+
+//   @include sm {
+//     margin:3rem 0;
+//     padding: 0 10%;
+//     .semana {
+//       flex-direction: row;
+//       justify-content:center;
+
+//       .menu-dia {
+//         width:50%;
+//         padding: 0 2rem;
+//         margin: 1rem;
+//       }
+//     }
+
+//     .menu-desalluno-merienda {
+//       display: flex;
+//       flex-wrap: wrap;
+//       flex-direction: row;
+//       > div {
+//         padding: 3rem 0;
+//         width: 50%;
+
+//         ul li {
+//           margin-bottom: 0;
+//         }
+//       }
+//     }
+
+//     .consejo {
+//       flex-direction:row;
+//       .menu-consejo {
+//         order:1;
+//         text-align: left;
+//         width: 60%;
+//         padding-right: 10%;
+//       }
+
+//       .menu-descargar {
+//         order:2;
+//         width: 40%;
+//       }
+//     }
+//   }
+
+//   @include md {
+//     padding: 0 25%;
+//     .semana {
+//       .menu-dia {
+//         width:20%;
+//       }
+//     }
+//   }
+// }

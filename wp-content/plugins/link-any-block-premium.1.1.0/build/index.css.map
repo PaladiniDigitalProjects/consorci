@@ -1,0 +1,1 @@
+{"version":3,"file":"index.css","mappings":";;;AAAA;EACC;EACA;EACA;AACD,C","sources":["webpack://ghub-link-any-block/./src/editor.scss"],"sourcesContent":[".ghub-link-any-block-unlink-button {\r\n\tdisplay: flex;\r\n\tjustify-content: flex-end;\r\n\tmargin: 14px;\r\n}\r\n"],"names":[],"sourceRoot":""}

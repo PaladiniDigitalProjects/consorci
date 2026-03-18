@@ -1,0 +1,29 @@
+.gutenberghub-license-card {
+	padding: 30px 20px !important;
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+	width: 100%;
+	max-width: 100%;
+	margin-top: 0 !important;
+}
+
+.gutenberghub-license-card h2 {
+	margin: 0 !important;
+}
+
+.gutenberghub-license-card .inside {
+	display: flex;
+	flex-direction: column;
+}
+
+.gutenberghub-submit {
+	margin-top: 10px !important;
+}
+
+.gutenberghub-license-form .gutenberghub-plugins {
+	display: grid;
+	grid-gap: 10px;
+	grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+	margin-right: 15px;
+}

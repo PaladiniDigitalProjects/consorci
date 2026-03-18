@@ -1,0 +1,46 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "ghub/tab-button",
+  "version": "1.0.0",
+  "title": "Tab Button",
+  "category": "ghub-products",
+  "description": "Create interactive tab buttons to navigate and showcase different content sections effortlessly.",
+  "keywords": [
+    "tab",
+    "button",
+    "tab button"
+  ],
+  "attributes": {
+    "buttonText": {
+      "type": "string"
+    }
+  },
+  "supports": {
+    "html": false,
+    "color": {
+      "text": true,
+      "background": true,
+      "gradients": true,
+      "link": true
+    },
+    "spacing": {
+      "padding": true
+    },
+    "typography": {
+      "fontSize": true,
+      "lineHeight": true
+    },
+    "align": true
+  },
+  "usesContext": [
+    "activeTabIndex"
+  ],
+  "parent": [
+    "ghub/tab-buttons-container"
+  ],
+  "textdomain": "gutenberghub-tabs",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css"
+}

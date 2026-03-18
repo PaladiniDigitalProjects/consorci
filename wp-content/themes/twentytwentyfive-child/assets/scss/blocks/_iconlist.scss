@@ -1,0 +1,124 @@
+.wp-block-iconlist {
+
+  .section-header{
+    text-align: center;
+
+    .section-title {
+      text-align: center;
+      padding: 4rem 0;
+      @include font-size(26);
+      line-height: 1;
+      color:$black;
+    }
+  }
+
+  .section-list {
+    display: flex;
+    flex-direction: column;
+
+    li{
+      width: 100%;
+      display: block;
+      padding: 0;
+      margin:0 2rem 2rem 2rem;
+      .entry {
+        display: flex;
+        flex-direction: row;
+        .entry-image {
+          width: 20%;
+          padding-right: 5%;
+        }
+
+        .entry-content {
+          width: 80%;
+          padding-right: 3rem;
+          .entry-title {
+            @include font-size(16);
+              margin-bottom: 0.5rem;
+          }
+          p {
+            @include font-size(14);
+            line-height: 1.2;
+            margin-bottom: 1rem;
+            transition: 0.25s;
+
+            button {
+            border:none;
+            background: transparent;
+            padding: 0 0 0 0.5rem;
+            cursor:pointer;
+            }
+
+            &.hide {
+                display: none;
+            }
+          }
+        }
+
+      }
+    }
+  }
+
+
+  @include tablet {
+
+    .section-header{
+      .section-title {
+        padding: 6rem 0;
+        @include font-size(50);
+      }
+    }
+
+    .section-list {
+      flex-direction: row;
+      flex-wrap: wrap;
+      li {
+        width: 50%;
+        margin:1rem 0 4rem 0;
+        padding:0 2rem 0 0;
+        .entry {
+          .entry-image {
+            width: 20%;
+            padding-right: 8%;
+          }
+          .entry-content {
+            width: 80%;
+            .entry-title {
+              @include font-size(18);
+            }
+            p {
+              @include font-size(18);
+              line-height: 1.3;
+            }
+          }
+        }
+      }
+    }
+    &.en-columna {
+      text-align: center;
+
+      .section-header{
+        .section-title {
+          text-align: left;
+          padding: 3rem 0;
+          @include font-size(32);
+        }
+      }
+
+      .section-list {
+        flex-direction: column;
+        li {
+          text-align: left;
+          width: 100%;
+          margin-bottom: 0;
+
+          .entry {
+            .entry-image {
+              width: 15%;
+            }
+          }
+        }
+      }
+    }
+  }
+}

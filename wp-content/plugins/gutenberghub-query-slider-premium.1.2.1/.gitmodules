@@ -1,0 +1,3 @@
+[submodule "gutenberghub-sdk"]
+	path = gutenberghub-sdk
+	url = https://github.com/GutenbergHubOfficial/gutenberghub-sdk

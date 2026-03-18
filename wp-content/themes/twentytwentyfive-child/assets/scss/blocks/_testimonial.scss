@@ -1,0 +1,44 @@
+.ub_testimonial {
+  margin:1rem;
+  border-radius: 0.8rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+
+  .ub_testimonial_img {
+    height: 5rem;
+    padding: 0;
+    img {
+        border-radius: 0;
+        max-width: 4rem;
+    }
+  }
+
+  .ub_testimonial_text{
+    font-size:24px !important;
+    font-size:2.4rem !important;
+    font-family: $fp-bold;
+    font-style: normal;
+    line-height: 1.2;
+  }
+
+  @include tablet  {
+    margin:3rem 0;
+
+    .ub_testimonial_img {
+      height: 10rem;
+      padding: 0;
+      img {
+          max-width: 6rem;
+      }
+    }
+
+    .ub_testimonial_text{
+      font-size:32px !important;
+      font-size:3.2rem !important;
+      line-height: 1.2;
+    }
+
+  }
+}

@@ -1,0 +1,146 @@
+/* ACCORDION */
+
+
+.wp-block-accordion {
+	overflow: hidden;
+	input {
+	  position: absolute;
+	  opacity: 0;
+	  z-index: -1;
+	}
+
+	.entry-antetitle {
+		margin: 1.5rem 1rem 0rem 1.2rem;
+		font-family: $fp-bold;
+		@include font-size(12);
+		line-height: 1.25;
+		text-transform: uppercase;
+		display: block;
+			@include tablet  {
+				@include font-size(12);
+				margin: 2rem 2rem 1rem 2.2rem;
+			}
+	}
+
+	.entry-title {
+		margin: 1rem 0;
+		padding: 0 2rem;
+		font-family: $fp-regular;
+		@include font-size(20);
+		line-height: 1.25;
+		text-transform: uppercase;
+		display: block;
+
+			@include tablet  {
+				margin: 0rem 2rem 0 2rem;
+				padding: 0 33% 0 0;
+				@include font-size(23);
+			}
+	}
+
+	.acc-header {
+		position: relative;
+	  display: flex;
+		flex-direction: column;
+	  cursor: pointer;
+		margin-bottom:-1rem;
+	  div {
+			width: 100%;
+			line-height: 1;
+			@include font-size(0);
+
+			&:first-child {
+				order: 2;
+				padding-bottom: 2rem;
+			}
+
+			&:last-child {
+				order: 1;
+				img {
+					width: 100%;
+					height: auto;
+				}
+			}
+		}
+
+		@include tablet  {
+		flex-direction: row;
+		 justify-content: space-between;
+			div {
+				width: 50%;
+				&:first-child {
+					order: 1;
+				}
+
+				&:last-child {
+					order: 2;
+				}
+			}
+		}
+
+	}
+	.acc-header:hover {
+	  background: $silver;
+	}
+	.acc-header::after {
+	  content: " ";
+		background: url('../img/ico-more.svg') center no-repeat;
+		background-size: 100% 100%;
+	  width: 2rem;
+	  height: 2rem;
+	  text-align: center;
+	  transition: all 35s;
+		// top: 65%;
+		right: 1.5rem;
+		position: absolute;
+
+    top: calc(36.23762376 * 0.34rem);
+
+			@media xs {
+				top: calc(36.23762376 * 0.675rem);
+			}
+
+			@include tablet  {
+				top:2rem;
+				right: calc(50% + 2rem);
+			}
+	}
+
+	.acc-entry-content {
+	  max-height: 0;
+	  transition: all 35s;
+		font-family: $fp-regular;
+		@include font-size(12);
+		line-height: 1.2;
+
+		ul, p {
+			margin:	0 0 0 0.5rem;
+			display: block;
+			padding: 2rem 0;
+			line-height: 0;
+
+		}
+
+		@include tablet  {
+			margin:0 2rem 0 2rem;
+			@include font-size(14);
+		}
+	}
+
+	input:checked + .acc-header {
+		// background: $silver;
+	}
+	input:checked + .acc-header::after {
+	  -webkit-transform: rotate(180deg);
+	          transform: rotate(180deg);
+	}
+	input:checked ~ .acc-entry-content {
+	  max-height: 100vh;
+	  // padding: 1em;
+	}
+
+	@include tablet  {
+		border-left:0px solid white;
+		border-right:0px solid white;
+	}
+}

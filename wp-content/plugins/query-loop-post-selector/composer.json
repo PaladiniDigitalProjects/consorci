@@ -1,0 +1,21 @@
+{
+    "name": "small-plugins/query-loop-post-selector",
+    "description": "A native query loop extension that adds a new option in the filter that allows user to specifically pick certain posts to display",
+    "autoload": {
+        "psr-4": {
+            "SmallPlugins\\QueryLoopPostSelector\\": "src/"
+        }
+    },
+    "scripts": {
+        "lint": "vendor/bin/phpcs query-loop-post-selector.php includes/",
+        "lint:fix": "vendor/bin/phpcbf query-loop-post-selector.php includes/ --standard=./ruleset.xml",
+        "post-install-cmd": "vendor/bin/phpcs --config-set installed_paths vendor/wp-coding-standards/wpcs",
+        "post-update-cmd": "vendor/bin/phpcs --config-set installed_paths vendor/wp-coding-standards/wpcs"
+    },
+    "require-dev": {
+        "wp-coding-standards/wpcs": "^2.3",
+        "phpcompatibility/php-compatibility": "^9.3",
+        "squizlabs/php_codesniffer": "^3.7"
+    },
+    "require": {}
+}

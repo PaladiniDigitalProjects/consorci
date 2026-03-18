@@ -1,0 +1,137 @@
+/**
+ * PDS Luge v2 – Compiled CSS
+ * Brand: Red #F40000 | Navy #0A3A5E | Mid-blue #1D669D | Slate #465466
+ * Source: src/style.scss
+ */
+
+/* 1. PARALLAX ─────────────────────────────────────────────────────── */
+.pds-parallax {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.pds-parallax-inner {
+  will-change: transform;
+}
+
+.pds-parallax-editor {
+  border: 2px dashed #1D669D;
+  border-radius: 4px;
+  padding: 1rem;
+  background: rgba(10, 58, 94, 0.03);
+}
+
+.pds-parallax-editor .pds-parallax-editor-label {
+  font-size: 0.75rem;
+  color: #465466;
+  background: rgba(10, 58, 94, 0.06);
+  padding: 0.3rem 0.6rem;
+  border-radius: 3px;
+  margin-bottom: 0.75rem;
+  font-family: monospace;
+}
+
+/* 2. TEXT REVEAL ──────────────────────────────────────────────────── */
+.pds-text-reveal {
+  line-height: inherit;
+}
+
+.pds-text-reveal .pds-tr-word,
+.pds-text-reveal .pds-tr-char {
+  display: inline-block;
+  will-change: opacity, transform;
+}
+
+.pds-text-reveal .pds-tr-line {
+  display: block;
+  will-change: opacity, transform;
+}
+
+.pds-text-reveal-editor {
+  border: 2px dashed #1D669D;
+  border-radius: 4px;
+  padding: 1rem;
+  background: rgba(10, 58, 94, 0.03);
+}
+
+/* 3. VIDEO SCRUB ──────────────────────────────────────────────────── */
+.pds-video-scrub-wrapper {
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.pds-video-scrub {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+.pds-video-scrub-editor {
+  border: 2px dashed #1D669D;
+  border-radius: 4px;
+  padding: 1rem;
+  background: rgba(10, 58, 94, 0.03);
+}
+
+.pds-video-scrub-editor .pds-video-scrub-preview {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 2px;
+  margin-bottom: 0.5rem;
+}
+
+.pds-video-scrub-editor .pds-video-scrub-editor-meta {
+  font-size: 0.72rem;
+  color: #465466;
+  font-family: monospace;
+  background: rgba(10, 58, 94, 0.06);
+  padding: 0.25rem 0.5rem;
+  border-radius: 3px;
+}
+
+/* 4. COUNTER ──────────────────────────────────────────────────────── */
+.pds-counter-wrapper {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.1em;
+}
+
+.pds-counter {
+  display: inline-block;
+  font-variant-numeric: tabular-nums;
+  will-change: contents;
+}
+
+.pds-counter-prefix,
+.pds-counter-suffix {
+  display: inline-block;
+}
+
+.pds-counter-editor {
+  border: 2px dashed #1D669D;
+  border-radius: 4px;
+  padding: 1.5rem;
+  text-align: center;
+  background: rgba(10, 58, 94, 0.03);
+}
+
+.pds-counter-editor .pds-counter-preview {
+  display: block;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #0A3A5E;
+  font-variant-numeric: tabular-nums;
+  margin-bottom: 0.4rem;
+}
+
+.pds-counter-editor .pds-counter-editor-hint {
+  font-size: 0.72rem;
+  color: #465466;
+  font-style: italic;
+}

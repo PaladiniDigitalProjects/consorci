@@ -1,0 +1,80 @@
+.wp-block-steps {
+  margin: 2rem 0;
+  padding: 2rem 0;
+
+  .post-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 2rem;
+    border:1px solid $primary;
+    li {
+      list-style-type: none;
+    }
+  }
+
+  .entry {
+    display: block;
+    width: 50%;
+    margin: 0;
+    padding: 5rem 2rem;
+    text-align: center;
+    border:2px solid $primary;
+
+    .step-nombre {
+      margin-bottom: 1rem;
+      font-family: $fp-regular;
+      color:$primary;
+      @include font-size(80);
+      line-height:1;
+      a {
+        color:$black;
+        &:hover {
+          color:$primary;
+        }
+      }
+    }
+
+    .step-title {
+      font-family: $fp-regular;
+      @include font-size(40);
+      line-height:1;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+
+    .step-subtitle {
+      font-family: $fp-regular;
+      @include font-size(26);
+      line-height: 1.1;
+      letter-spacing: 0.05rem;
+      margin: 0 3rem;
+    }
+  }
+
+  .section-footer {
+    margin: 3rem 0;
+  } //end section footer
+
+
+  @include tablet  {
+
+    .post-list {
+      display: flex;
+      flex-direction: row;
+      margin: 4rem 0;
+      .entry {
+        width: 25%;
+        margin: 0;
+      } // end entry
+    } // END POT LIST
+
+    .section-footer {
+      position: relative;
+      .btn {
+        position: absolute;
+        right: 0;
+      }
+    } //end section footer
+  }
+}

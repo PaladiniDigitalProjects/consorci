@@ -1,0 +1,156 @@
+/**
+ * PDS Luge v2 – Styles
+ * Brand: Red #F40000 | Navy #0A3A5E | Mid-blue #1D669D | Slate #465466
+ * Compile: npm run build
+ */
+
+// ── Variables ──────────────────────────────────────────────────────
+$red:      #F40000;
+$navy:     #0A3A5E;
+$mid-blue: #1D669D;
+$slate:    #465466;
+
+// ═══════════════════════════════════════════════════════════════════
+// 1. PARALLAX
+// ═══════════════════════════════════════════════════════════════════
+.pds-parallax {
+	position: relative;
+	overflow: hidden;
+	width: 100%;
+	box-sizing: border-box;
+}
+
+.pds-parallax-inner {
+	will-change: transform;
+}
+
+// Editor preview
+.pds-parallax-editor {
+	border: 2px dashed $mid-blue;
+	border-radius: 4px;
+	padding: 1rem;
+	background: rgba($navy, 0.03);
+
+	.pds-parallax-editor-label {
+		font-size: 0.75rem;
+		color: $slate;
+		background: rgba($navy, 0.06);
+		padding: 0.3rem 0.6rem;
+		border-radius: 3px;
+		margin-bottom: 0.75rem;
+		font-family: monospace;
+	}
+}
+
+// ═══════════════════════════════════════════════════════════════════
+// 2. TEXT REVEAL
+// ═══════════════════════════════════════════════════════════════════
+.pds-text-reveal {
+	/* El JS inyecta spans con opacity:0 inline — aquí solo tipografía */
+	line-height: inherit;
+
+	.pds-tr-word,
+	.pds-tr-char {
+		display: inline-block;
+		will-change: opacity, transform;
+	}
+
+	.pds-tr-line {
+		display: block;
+		will-change: opacity, transform;
+	}
+}
+
+// Editor preview
+.pds-text-reveal-editor {
+	border: 2px dashed $mid-blue;
+	border-radius: 4px;
+	padding: 1rem;
+	background: rgba($navy, 0.03);
+}
+
+// ═══════════════════════════════════════════════════════════════════
+// 3. VIDEO SCRUB
+// ═══════════════════════════════════════════════════════════════════
+.pds-video-scrub-wrapper {
+	position: relative;
+	width: 100%;
+	box-sizing: border-box;
+}
+
+.pds-video-scrub {
+	display: block;
+	width: 100%;
+	height: auto;
+	max-width: 100%;
+	object-fit: cover;
+}
+
+// Editor preview
+.pds-video-scrub-editor {
+	border: 2px dashed $mid-blue;
+	border-radius: 4px;
+	padding: 1rem;
+	background: rgba($navy, 0.03);
+
+	.pds-video-scrub-preview {
+		display: block;
+		width: 100%;
+		height: auto;
+		border-radius: 2px;
+		margin-bottom: 0.5rem;
+	}
+
+	.pds-video-scrub-editor-meta {
+		font-size: 0.72rem;
+		color: $slate;
+		font-family: monospace;
+		background: rgba($navy, 0.06);
+		padding: 0.25rem 0.5rem;
+		border-radius: 3px;
+	}
+}
+
+// ═══════════════════════════════════════════════════════════════════
+// 4. COUNTER
+// ═══════════════════════════════════════════════════════════════════
+.pds-counter-wrapper {
+	display: inline-flex;
+	align-items: baseline;
+	gap: 0.1em;
+}
+
+.pds-counter {
+	display: inline-block;
+	font-variant-numeric: tabular-nums;
+	will-change: contents;
+}
+
+.pds-counter-prefix,
+.pds-counter-suffix {
+	display: inline-block;
+}
+
+// Editor preview
+.pds-counter-editor {
+	border: 2px dashed $mid-blue;
+	border-radius: 4px;
+	padding: 1.5rem;
+	text-align: center;
+	background: rgba($navy, 0.03);
+
+	.pds-counter-preview {
+		display: block;
+		font-size: 2.5rem;
+		font-weight: 700;
+		color: $navy;
+		font-variant-numeric: tabular-nums;
+		margin-bottom: 0.4rem;
+	}
+
+	.pds-counter-editor-hint {
+		font-size: 0.72rem;
+		color: $slate;
+		font-style: italic;
+	}
+}

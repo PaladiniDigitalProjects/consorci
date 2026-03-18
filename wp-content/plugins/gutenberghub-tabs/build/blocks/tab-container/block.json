@@ -1,0 +1,74 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "ghub/tabs-container",
+  "version": "1.0.0",
+  "title": "Tabs",
+  "category": "ghub-products",
+  "keywords": [
+    "tab",
+    "menu"
+  ],
+  "description": "Organize your content with flexible and creative tab layouts, collapsible blocks, and styling options!",
+  "attributes": {
+    "showPlaceholder": {
+      "type": "boolean",
+      "default": true
+    },
+    "activeTabIndex": {
+      "type": "number",
+      "default": 0
+    },
+    "layout": {
+      "type": "object",
+      "default": {
+        "justifyContent": "stretch",
+        "orientation": "vertical",
+        "type": "flex",
+        "verticalAlignment": "undefined"
+      }
+    }
+  },
+  "providesContext": {
+    "activeTabIndex": "activeTabIndex"
+  },
+  "supports": {
+    "html": false,
+    "color": {
+      "text": true,
+      "background": true,
+      "gradients": true,
+      "link": true
+    },
+    "__experimentalBorder": {
+      "color": true,
+      "radius": true,
+      "style": true,
+      "width": true,
+      "__experimentalDefaultControls": {
+        "color": true,
+        "radius": true,
+        "style": true,
+        "width": true
+      }
+    },
+    "spacing": {
+      "padding": true,
+      "margin": true,
+      "blockGap": false,
+      "__experimentalDefaultControls": {
+        "blockGap": false
+      }
+    },
+    "typography": {
+      "fontSize": true,
+      "lineHeight": true
+    },
+    "align": true
+  },
+  "textdomain": "gutenberghub-tabs",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "viewScript": "gutenberghub-tabs-frontend-script"
+}

@@ -1,0 +1,37 @@
+@use './variables';
+@use './generics';
+@use './header';
+@use './buttons';
+@use './animacions';
+@use './wpforms';
+@use './localizaciones';
+@use './nav';
+@use './listados';
+@use './single';
+@use './category';
+@use './nutrities';
+@use './components';
+@use './event';
+@use './page';
+@use './grid';
+
+// LANDING PAGES
+
+@use './landings/desnudos';
+@use './landings/nutrities' as landings-nutrities;
+
+// BLOCKS
+
+@use './blocks/slider';
+// @use './blocks/block-menu';
+// @use './blocks/related';
+// @use './blocks/events';
+// @use './blocks/projects-slider';
+@use './blocks/carousell';
+// @use './blocks/ticker';
+// @use './blocks/mapa';
+@use './blocks/noticias';
+@use './blocks/relacionado';
+// @use './blocks/donaciones';
+// @use './blocks/descargas';
+// @use './blocks/redes-sociales';

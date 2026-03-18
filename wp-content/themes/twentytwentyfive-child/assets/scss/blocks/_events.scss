@@ -1,0 +1,301 @@
+
+.wp-block-events {
+  max-width: 100rem;
+   padding:0 1.5rem;
+
+  .section-header {
+    padding: 0 0 0 0;
+    margin: 0;
+    .section-title {
+      margin: 0;
+      padding: 2rem 0;
+      @include font-size(30);
+      line-height: 100%;
+      text-align: left;
+      color:$primary;
+    }
+  }
+
+  ul.post-list {
+    border-top: 0.1rem dotted $primary;
+    list-style-type: none;
+    margin-left: 0;
+    flex-direction: column;
+    li {
+      list-style-type: none;
+      margin-left: 0;
+    }
+  }
+
+  .entry {
+    display: flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+    align-items:stretch;
+    margin: 0;
+    padding: 2rem 0;
+    border-bottom: 0.1rem dotted $primary;
+
+
+    .entry-day {
+      width: 50%;
+      border:0.1rem solid $primary;
+      padding: 2rem 0 0 0;
+      font-family: $fs-regular;
+      line-height: 115%;
+
+      time {
+        text-align: center;
+        color:$primary;
+        @include font-size(60);
+        line-height: 80%;
+        span {
+          display: block;
+          text-align: center;
+          @include font-size(18);
+          text-transform: uppercase;
+        }
+      }
+    }
+    
+    .entry-content {
+      order:3;
+      width: 100%;
+      padding:2rem 0 0 0;
+      ul.category-list {
+        // display:inline-block;
+        li.entry-categories {
+          &.sjd {
+            display: none;
+          }
+          
+          @include font-size(14);
+          font-family: $fp-light;
+          line-height: 100%;
+          text-transform: uppercase;
+          letter-spacing: 0.075rem;
+          margin:0 1rem 0.5rem 0;
+          width: inherit
+        }
+      }
+      
+      
+      .evento-lugar {
+        @include font-size(16);
+        position: relative;
+        padding-left: 2rem;
+        font-family:$fp-light ;
+        &::before {
+          position: absolute;
+          top:0.2rem;
+          left:-0.4rem;
+          content:' ';
+          width: 2rem;
+          height: 2rem;
+          background: url('../img/ico-localizacion.svg') center no-repeat;
+          background-size: 100% 100%;
+          display: block;
+        }
+      }
+      
+
+      .entry-title {
+        text-align: left;
+        margin: 0 0 0.5rem 0;
+        padding: 0;
+        font-family: $fs-regular;
+        @include font-size(24);
+        line-height: 120%;
+        color:$primary;
+        a {
+          color:$primary;
+        }
+      }
+
+      .entry-excerpt {
+        padding: 1rem 3rem 2rem 0;
+        margin: 0;
+        @include font-size(16);
+        line-height: 125%;
+      }
+    
+      .btn-primary {
+        float: right;
+        border-radius: 0.3rem;
+        a { 
+            display: block;
+            padding: 1rem 1.5rem;
+            color:$white;
+            text-transform: uppercase;
+            letter-spacing: 0.1rem;
+            font-weight: 500;
+          }  
+        }
+    }
+
+    .entry-image {
+      order:2;
+      width: 50%;
+      padding-bottom: 0;
+      border-top:0.1rem solid $primary;
+      border-right:0.1rem solid $primary;
+      border-bottom:0.1rem solid $primary;
+      line-height: 0;
+      -webkit-background-size: cover !important;
+      -moz-background-size: cover !important;
+      -o-background-size: cover !important;
+      background-size: cover !important;
+    }
+  }
+
+  @include tablet {
+
+    .entry { 
+      .entry-day {
+        width: 11rem;
+        time {
+          @include font-size(40);
+          span {
+            @include font-size(14);
+          }
+        }
+      }
+
+      .entry-content {
+        order:2;
+        width: calc(80% - 11rem);
+        padding:0 2rem 0 2rem;
+      }
+
+      .entry-image {
+        order:3;
+        width: 20%;
+        padding-bottom: 20%;
+        border-left:0.1rem solid $primary;
+      }
+    }
+  }
+
+  @include laptop { 
+    padding:0;
+    .section-header {
+      padding: 2rem 0 3rem 0;
+      .section-title {
+        @include font-size(60);
+        text-align: center;
+      }
+    } 
+    
+    .entry {
+      .entry-day {
+        // padding: 4rem 1rem;
+        width: 16rem;
+        time {
+          @include font-size(60);
+          span {
+            @include font-size(14);
+          }
+        }
+      }
+
+      .entry-content {
+        width: calc(87% - 16rem);
+
+        .entry-title {
+          @include font-size(30);
+        }
+
+        .btn-primary {
+          float: none;
+        }
+      }
+
+      .entry-image {
+        width: 13%;
+        padding-bottom: 5%;
+        border-left:0.1rem solid $primary;
+      }
+    }
+  }
+  
+  @include large {
+    .section-header {
+      padding: 3rem 0 4rem 0;
+      .section-title {
+        @include font-size(60);
+      }
+    }
+
+    .post-list {
+      display: flex;
+      flex-direction: column;
+      li {
+        line-height: 0 !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        // display: block;
+        //    &:nth-child(even) {border:1px solid red;}
+        //    &:nth-child(odd) {border:1px solid lime;}
+
+
+    .entry {
+      // padding: 0;
+      margin: 0;
+      .entry-content {
+        .entry-title {
+          @include font-size(28);
+        }
+      }
+    }
+    
+  }
+}
+
+  }
+}
+
+.post-type-archive-tribe_events  {
+  .tribe-events-header {
+    // display:none;
+
+    .tribe-events-c-events-bar__views {
+      display: none;
+    }
+
+    time {
+      color:$primary;
+    }
+
+    li {
+      list-style-type: none;
+    }
+  }
+
+  .tribe-events-calendar-month__day-date,
+  .tribe-events-calendar-month__day-date-daynum,
+  .tribe-events-calendar-month__day-date-link,
+  .tribe-events .tribe-events-calendar-month__day--past .tribe-events-calendar-month__day-date-link {
+    font-family: $fs-regular;
+    font-weight: lighter !important;
+    font-size:27px !important;
+    text-align: left !important;
+    line-height: 110%;
+    color:$primary !important;
+  } 
+}
+
+// .tribe-common--breakpoint-medium.tribe-events .tribe-events-c-top-bar {
+//   align-items: center !important;
+//   display: flex !important;
+//   flex-direction: row-reverse !important;
+//   flex-wrap: wrap !important;
+//   justify-content: flex-end !important;
+// }
+
+.tribe-events-c-subscribe-dropdown,
+.tribe-common--breakpoint-medium.tribe-events .tribe-events-c-top-bar__datepicker-button-icon-svg {
+  display: none !important;
+}
+
+
+

@@ -1,0 +1,51 @@
+@use './variables' as *;
+
+.page {
+    .wp-site-blocks {
+        position: relative;
+
+        .ImgApertura {
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            z-index: -1;
+        }
+
+        .PageContent {
+            
+            .wp-block-navigation {
+                width: 100%;
+                gap: 0;
+                .wp-block-navigation-item {
+                    border-bottom: 0.1rem solid $primary;
+                    width: 100%;
+                    a {
+                        width: 100%;
+                        padding: 0.75rem 0 0.75rem 0;
+                        transition: 0.25s;
+                        &:hover {
+                            text-decoration: none;
+                            color:$white;
+                            background-color: $primary;
+                            padding-left: 0.75rem;
+                        }
+                    }
+                    &:first-child {
+                        border-top: 0.1rem solid $primary;
+                    }
+
+                    &.current-menu-item {
+                        a {
+                            text-decoration: none;
+                            color:$white;
+                            background-color: $primary;
+                            padding-left: 0.75rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

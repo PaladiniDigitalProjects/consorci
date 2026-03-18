@@ -1,0 +1,66 @@
+/*!*************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/blocks/tab-container/editor.scss ***!
+  \*************************************************************************************************************************************************************************************************************************************************************/
+.gutenberghub-tabs-container .gutenberghub-tab-buttons-container {
+  width: 100%;
+  box-sizing: border-box;
+}
+.gutenberghub-tabs-container .gutenberghub-tab-buttons-container .gutenberghub-tab-button {
+  color: var(--ghub-tabs-button-text-color);
+  background: var(--ghub-tabs-button-bg-color);
+  border-top-left-radius: var(--ghub-tabs-button-top-left-radius);
+  border-top-right-radius: var(--ghub-tabs-button-top-right-radius);
+  border-bottom-left-radius: var(--ghub-tabs-button-bottom-left-radius);
+  border-bottom-right-radius: var(--ghub-tabs-button-bottom-right-radius);
+  border-top: var(--ghub-tabs-button-border-top);
+  border-right: var(--ghub-tabs-button-border-right);
+  border-bottom: var(--ghub-tabs-button-border-bottom);
+  border-left: var(--ghub-tabs-button-border-left);
+  padding-top: var(--ghub-tabs-button-padding-top);
+  padding-right: var(--ghub-tabs-button-padding-right);
+  padding-bottom: var(--ghub-tabs-button-padding-bottom);
+  padding-left: var(--ghub-tabs-button-padding-left);
+}
+.gutenberghub-tabs-container .gutenberghub-tab-buttons-container .gutenberghub-tab-button:hover {
+  color: var(--ghub-hover-tabs-button-text-color, var(--ghub-tabs-button-text-color));
+  background: var(--ghub-hover-tabs-button-bg-color, var(--ghub-tabs-button-bg-color));
+}
+.gutenberghub-tabs-container .gutenberghub-tab-buttons-container .gutenberghub-tab-button.gutenberghub-active-tab {
+  color: var(--ghub-active-tab-button-text-color, var(--ghub-tabs-button-text-color));
+  background: var(--ghub-active-tab-button-bg-color, var(--ghub-tabs-button-bg-color));
+  border-top-left-radius: var(--ghub-active-tab-button-top-left-radius, var(--ghub-tabs-button-top-left-radius));
+  border-top-right-radius: var(--ghub-active-tab-button-top-right-radius, var(--ghub-tabs-button-top-right-radius));
+  border-bottom-left-radius: var(--ghub-active-tab-button-bottom-left-radius, var(--ghub-tabs-button-bottom-left-radius));
+  border-bottom-right-radius: var(--ghub-active-tab-button-bottom-right-radius, var(--ghub-tabs-button-bottom-right-radius));
+  border-top: var(--ghub-active-tab-button-border-top, var(--ghub-tabs-button-border-top));
+  border-right: var(--ghub-active-tab-button-border-right, var(--ghub-tabs-button-border-right));
+  border-bottom: var(--ghub-active-tab-button-border-bottom, var(--ghub-tabs-button-border-bottom));
+  border-left: var(--ghub-active-tab-button-border-left, var(--ghub-tabs-button-border-left));
+  padding-top: var(--ghub-active-tab-button-padding-top, var(--ghub-tabs-button-padding-top));
+  padding-right: var(--ghub-active-tab-button-padding-right, var(--ghub-tabs-button-padding-right));
+  padding-bottom: var(--ghub-active-tab-button-padding-bottom, var(--ghub-tabs-button-padding-bottom));
+  padding-left: var(--ghub-active-tab-button-padding-left, var(--ghub-tabs-button-padding-left));
+}
+.gutenberghub-tabs-container .gutenberghub-tab-contents-container {
+  overflow: hidden;
+  width: 100%;
+  box-sizing: border-box;
+}
+.gutenberghub-tabs-container .gutenberghub-tab-contents-container .gutenberghub-tab-content {
+  color: var(--ghub-content-text-color);
+  background: var(--ghub-content-bg-color);
+  border-top-left-radius: var(--ghub-content-top-left-radius);
+  border-top-right-radius: var(--ghub-content-top-right-radius);
+  border-bottom-left-radius: var(--ghub-content-bottom-left-radius);
+  border-bottom-right-radius: var(--ghub-content-bottom-right-radius);
+  border-top: var(--ghub-content-border-top);
+  border-right: var(--ghub-content-border-right);
+  border-bottom: var(--ghub-content-border-bottom);
+  border-left: var(--ghub-content-border-left);
+  padding-top: var(--ghub-content-padding-top);
+  padding-right: var(--ghub-content-padding-right);
+  padding-bottom: var(--ghub-content-padding-bottom);
+  padding-left: var(--ghub-content-padding-left);
+}
+
+/*# sourceMappingURL=index.css.map*/

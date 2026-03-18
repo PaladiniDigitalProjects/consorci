@@ -1,0 +1,289 @@
+@use '../variables' as *;
+
+.wp-block-slider {
+  background-color: #ededed;
+
+  .slide {
+    margin-right: 0;
+    display: flex;
+    flex-direction: column;
+    height: 60rem;
+     
+    .slide-claim {
+      width: 100%;
+      text-align: left;
+      padding-top: 2.5rem;
+
+      .slide-title {
+        color:$black;
+        text-align: center;
+        @include font-size(20);
+        margin: 1rem 2rem;
+      }
+
+      .slide-subtitle {
+        color:$black;
+        text-align: left;
+        @include font-size(20);
+        margin: 2rem;
+      }
+
+      .slide-parraf {
+        margin: 0 2rem 2rem;
+        p {
+          @include font-size(17);  
+          line-height: 1.35;
+        }
+      }
+
+      .slide-testimonial {
+        margin: 2rem;
+        display: flex;
+        flex-direction: row;
+
+        .img-responsive {
+          width: 6rem;
+          height: 6rem;
+          border:0.2rem solid $primary;
+        }
+
+        .slide-testimonial-text {
+          p {
+            @include font-size(14);
+            line-height: 1.1;
+            padding: 0.5rem 0 1rem 1rem;
+            strong {
+              font-weight: 600;
+            }
+            a { color:$black; }
+          }
+        }
+      }
+
+      .link {
+        float: right;
+      }
+
+      .slide-footer {
+        padding: 0 2rem;
+        display: flex;
+        flex-direction: row;
+        div {
+          &:first-child {
+            width: 70%;
+            text-align: left;
+            a {
+              font-weight:200;
+              color:$primary;
+              line-height: 1.1;
+              float: left;
+              &:hover {
+                opacity: 1;
+                color:$secondary;
+              }
+            }
+          }
+          &:last-child {
+            width: 30%;
+            text-align: right;
+
+            a {
+              float: right;
+              line-height:1.1;
+            }
+          }
+        }
+      }
+
+    }
+  }
+  
+
+  @include tablet {
+    .slide {
+          
+      .slide-claim {
+        padding-top: 70%;
+  
+        .slide-title {
+          @include font-size(30);
+          margin:4rem 2rem 1rem 2rem
+          
+        }
+  
+        .slide-subtitle {
+          @include font-size(20);
+        }
+  
+        .slide-parraf {
+          margin: 0 2rem 4rem;
+          p {
+            @include font-size(26);  
+          }
+        }
+  
+        .slide-testimonial {
+          margin-top: 0;
+          .img-responsive {
+            width: 8rem;
+            height: 8rem;
+            border:0.2rem solid $primary;
+          }
+  
+          .slide-testimonial-text {
+            p {
+              @include font-size(18);
+              line-height: 1.1;
+              padding: 1rem 0 1rem 1.4rem;
+            }
+          }
+        }
+
+        .slide-footer div a {
+          @include font-size(19);
+        }
+        
+        .slide-footer div:first-child a {
+          font-weight: 400;
+        }
+ 
+      }
+    }
+  }
+
+  @include laptop {
+    .slide {
+      .slide-claim {
+        padding-top: 2.5rem;
+  
+        .slide-title {
+          margin: 4rem 3rem 1rem 3rem;
+          @include font-size(30);
+        }
+  
+        .slide-subtitle {
+          @include font-size(34);
+        }
+  
+        .slide-parraf {
+          margin: 0 3rem 4rem;
+          p {
+            @include font-size(30);  
+          }
+        }
+  
+        .slide-testimonial {
+           margin:0 3rem 3rem 3rem;
+  
+          .img-responsive {
+            width: 8rem;
+            height: 8rem;
+            border:0.2rem solid $primary;
+          }
+  
+          .slide-testimonial-text {
+            p {
+              @include font-size(18);
+              line-height: 1.1;
+              padding: 1rem 0 1rem 2rem;
+            }
+          }
+        }
+
+        .slide-footer {
+          padding-left: 3rem;
+          padding-right: 3rem;
+          div a { @include font-size(22); }
+          .slide-footer div:first-child a { font-weight: 400; }
+
+        }
+ 
+      }
+    }
+  }
+
+  @include large {
+    .slide {
+      padding-bottom: 8rem;
+      .slide-claim {
+
+          
+        .slide-title {
+          margin: 6rem 3rem 2rem 3rem;
+          @include font-size(33);
+        }
+
+        .slide-parraf {
+          margin: 0rem 3rem 6rem;
+        }
+  
+        .slide-testimonial {
+           margin:0 3rem 3rem 3rem;
+  
+          .img-responsive {
+            width: 10rem;
+            height: 10rem;
+            border:0.2rem solid $primary;
+          }
+  
+          .slide-testimonial-text {
+            p {
+              @include font-size(20);
+              line-height: 1.1;
+              padding: 2rem 0 0 2rem;
+            }
+          }
+        }
+
+        .slide-footer {
+          padding-left: 3rem;
+          padding-right: 3rem;
+          div a { @include font-size(22); }
+          .slide-footer div:first-child a { font-weight: 400; }
+
+        }
+ 
+      }
+    }
+  
+  }
+
+}
+
+
+.owl-carousel {
+  display: block !important;
+}
+
+.owl-theme {
+  .owl-nav {
+    display: none;
+  }
+
+  .owl-dots {
+    z-index: 2;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    .owl-dot{
+      span {
+        transition: 0.5s;
+        margin: 5px 3px !important;
+        background-color: $white !important;
+        &:hover {
+          opacity:0.5;
+        }
+      }
+      &.active span {
+        background-color: $primary !important;
+        &:hover { 
+          background-color: $secondary !important;
+        }
+      } 
+    } 
+  }
+}
+
+
+

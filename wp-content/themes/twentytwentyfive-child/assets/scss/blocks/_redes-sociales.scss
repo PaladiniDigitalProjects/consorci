@@ -1,0 +1,60 @@
+.wp-block-redes-sociales {
+  padding: 2rem;
+  .section-header {
+    border-bottom: 0;
+    padding: 0;
+    margin: 0 0 2rem 0;
+    .section-title {
+      color:$primary;
+      padding: 0;
+      margin: 0;
+    }
+  }
+
+  ul.list {
+    margin: 0;
+    padding: 0;
+    display:grid;
+    grid-template-columns: 33.333% 33.333% 33.333%;
+    grid-template-rows: 33.333% 33.333% 33.333%;
+    li {
+      list-style-type: none;
+      padding:0;
+      margin:0;
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+
+      a {
+        line-height: 0;
+        @include font-size(0);
+        display: block;
+      }
+    }
+  }
+
+  @include tablet {
+    .section-header {
+      max-width: 50rem;
+    }
+    ul.list {
+      grid-template-columns: 25% 25% 25% 25%;
+      grid-template-rows: 25% 25% 25% 25%;
+      max-width: 50rem;
+    }
+  }
+
+  @include large {
+    margin-left: 4rem;
+    .section-header {
+      max-width: 50rem;
+    }
+    ul.list {
+      grid-template-columns: 33.333% 33.333% 33.333%;
+      grid-template-rows: 33.333% 33.333% 33.333%;
+      max-width: 80rem;
+    }
+  }
+}

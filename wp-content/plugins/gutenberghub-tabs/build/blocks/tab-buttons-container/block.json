@@ -1,0 +1,149 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "ghub/tab-buttons-container",
+  "version": "1.0.0",
+  "title": "Tab Buttons",
+  "category": "ghub-products",
+  "description": "Empowering you to add and style separate tabs buttons, providing flexibility and creativity in content organization.",
+  "keywords": [
+    "tab buttons",
+    "buttons"
+  ],
+  "attributes": {
+    "tabsBorder": {
+      "type": "object",
+      "default": {}
+    },
+    "tabsBorderRadius": {
+      "type": "object",
+      "default": {}
+    },
+    "tabsTextColor": {
+      "type": "string",
+      "default": null
+    },
+    "tabsBackgroundColor": {
+      "type": "string",
+      "default": null
+    },
+    "tabsGradientBackground": {
+      "type": "string",
+      "default": null
+    },
+    "tabsPadding": {
+      "type": "object",
+      "default": {
+        "top": "10px",
+        "right": "20px",
+        "bottom": "10px",
+        "left": "20px"
+      }
+    },
+    "activeTabBorder": {
+      "type": "object",
+      "default": {}
+    },
+    "activeTabTextColor": {
+      "type": "string",
+      "default": null
+    },
+    "activeTabBackgroundColor": {
+      "type": "string",
+      "default": null
+    },
+    "activeTabGradientBackground": {
+      "type": "string",
+      "default": null
+    },
+    "activeTabPadding": {
+      "type": "object",
+      "default": {}
+    },
+    "trigger": {
+      "type": "string",
+      "default": "click"
+    },
+    "shouldFallback": {
+      "type": "boolean",
+      "default": false
+    },
+    "hoverTabTextColor": {
+      "type": "string",
+      "default": null
+    },
+    "hoverTabBackgroundColor": {
+      "type": "string",
+      "default": null
+    },
+    "hoverTabGradientBackground": {
+      "type": "string",
+      "default": null
+    }
+  },
+  "supports": {
+    "__experimentalLayout": {
+      "allowJustification": true,
+      "allowOrientation": true,
+      "allowInheriting": false,
+      "allowSizingOnChildren": false,
+      "allowSwitching": false,
+      "allowVerticalAlignment": true,
+      "allowEditing": true,
+      "default": {
+        "type": "flex"
+      }
+    },
+    "layout": {
+      "allowJustification": true,
+      "allowOrientation": true,
+      "allowInheriting": false,
+      "allowSizingOnChildren": false,
+      "allowSwitching": false,
+      "allowVerticalAlignment": true,
+      "allowEditing": true,
+      "default": {
+        "type": "flex"
+      }
+    },
+    "__experimentalBorder": {
+      "color": true,
+      "radius": true,
+      "style": true,
+      "width": true,
+      "__experimentalDefaultControls": {
+        "color": true,
+        "radius": true,
+        "style": true,
+        "width": true
+      }
+    },
+    "html": false,
+    "color": {
+      "text": false,
+      "background": true,
+      "gradients": true,
+      "link": false
+    },
+    "spacing": {
+      "padding": true,
+      "margin": true,
+      "blockGap": true,
+      "__experimentalDefaultControls": {
+        "blockGap": true
+      }
+    },
+    "typography": {
+      "fontSize": true,
+      "lineHeight": true
+    },
+    "align": true
+  },
+  "ancestor": [
+    "ghub/tabs-container"
+  ],
+  "textdomain": "gutenberghub-tabs",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css"
+}

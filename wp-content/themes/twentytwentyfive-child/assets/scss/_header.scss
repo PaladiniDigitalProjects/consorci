@@ -1,0 +1,61 @@
+@use './variables' as *;
+
+// LOGO
+
+.wp-block-site-logo {
+  width: 100%;
+  max-width: 16rem;
+
+  @include tablet {
+    max-width: 10rem;
+  }
+
+  @include laptop {
+    max-width: 14rem;
+  }
+
+  @include large {
+    max-width: 16rem;
+  }
+}
+
+
+
+// HEADER PAGES
+
+header.wp-block-template-part {
+
+  padding: 0 1rem;
+  width: calc(100% - 2rem);
+  margin: 0 auto;
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  background-color: var(--wp--preset--color--base);
+
+  &.headerup {
+    transform: translateY(-13rem);
+  }
+
+  &.fullheader {
+    transition: 0.35s;
+    transform: translateY(0);
+    border-bottom: 0.1rem solid $primary;
+  }
+
+  &+main {
+    padding-top: 0;
+    top: 6.6rem;
+  }
+
+  .Sub_Menus {
+    position: absolute;
+    z-index: 11;
+    left: 0;
+    right: 0;
+  }
+
+  &.fullheader {
+    border-bottom: none;
+  }
+}

@@ -1,0 +1,23 @@
+{
+	"name": "ghub-link-any-block",
+	"version": "1.0.0",
+	"description": "This plugin adds a simple yet powerful feature to Gutenberg, allowing users to add a link to any block. This functionality provides greater flexibility and control in creating engaging and interactive content for your website.",
+	"author": "GutenbergHub",
+	"license": "GPL-2.0-or-later",
+	"main": "build/index.js",
+	"scripts": {
+		"build": "wp-scripts build",
+		"format": "wp-scripts format",
+		"lint:css": "wp-scripts lint-style",
+		"lint:js": "wp-scripts lint-js",
+		"packages-update": "wp-scripts packages-update",
+		"plugin-zip": "wp-scripts plugin-zip",
+		"start": "WATCHPACK_POLLING=true wp-scripts start"
+	},
+	"devDependencies": {
+		"@wordpress/scripts": "^22.2.1"
+	},
+	"dependencies": {
+		"@wordpress/icons": "^9.21.0"
+	}
+}

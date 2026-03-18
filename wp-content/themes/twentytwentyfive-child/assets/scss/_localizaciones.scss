@@ -1,0 +1,205 @@
+@use './variables' as *;
+
+/* LOCTIONS */
+
+.pds-tiendas {
+  max-height: inherit;
+  overflow:hidden !important;
+  max-height: inherit !important;
+
+
+  .pds-tiendas-list {
+    position: inherit;
+     &.grid{
+       gap: 1.5rem !important;
+
+       .pds-title {
+          font-size: 1.4rem !important;
+          font-weight: 400 !important;
+          margin-bottom: 0.5rem !important;
+       }
+             
+       .pds-provincia,
+       .pds-ambitos {
+          font-size: 1rem !important;
+       }
+     }
+
+    &.list {
+      .pds-tiendas-row {
+        display: flex;
+        flex-direction: row;
+        flex-wrap:wrap;
+        gap: 0.5rem 1rem;
+        .pds-column {
+          width: 50%;
+          &.pds-col-1 {
+            width: calc(32% - 0.5rem);
+          }
+          &.pds-col-2 {
+            width: calc(68% - 0.5rem);
+          }
+          &.pds-col-3 {
+            width: 100%;
+            h4 {
+              display: none;
+            }
+            strong {
+              display: inline-block;
+              font-weight: 400;
+              padding-right: 0.5rem;
+              font-size: 1rem;
+            }
+
+            p {
+              font-size: 1rem;
+              line-height: 125%;
+            }
+          }
+          &.pds-col-4 {
+            display: none;
+          }
+
+          .pds-col-text {
+            .pds-provincia,
+            .pds-ambitos {
+              font-weight: 300;
+              letter-spacing: 0.025rem;
+              font-size: 1rem !important;
+            }
+
+            .pds-title {
+              font-size: 1.4rem;
+              line-height: 120%;
+              margin: 0 0 0 0;
+            }
+          }
+        }
+      }
+      @include laptop {
+        .pds-tiendas-row {
+          padding-bottom: 1.5rem !important;
+          .pds-column {
+            &.pds-col-1 {
+              width: 10%;
+            }
+      
+            &.pds-col-2 {
+              width: 25%;
+            }
+            &.pds-col-3 {
+              width: 30%;
+              h4 { display: block; }
+            }
+            &.pds-col-4 {
+              display: block;
+              width: 30%;
+            }
+
+            h4 {
+              margin: 0 0 0.5rem 0;
+              color:$primary;
+              font-size: 1rem;
+              font-weight: 600;
+            }
+          }
+        }
+      }
+
+    } // END LIST
+  }
+}
+
+.tienda-block {
+  
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  .tienda-content-section {
+    width: 100%;
+    .tienda-content {
+        p:first-of-type {
+        color: $primary !important;
+        font-size: 1.3rem;
+        font-weight: 400;
+      }
+  
+      .info-store {
+        .data {
+          a {
+            color: $primary !important;
+            text-decoration: none;
+            font-size: 1.3rem;
+            font-weight: 400;
+          }
+          .icon {
+            display: inline-block;
+            width: 2rem;
+            height: auto;
+            > img {
+              margin: 0.5rem 1.5rem -0.4rem 0;
+              width: 100%;
+              height: auto;
+            }
+          }
+        } 
+      }
+    } 
+
+    .tienda-map {
+      width: 100%;
+      
+      iframe {
+        width: 100%;
+        min-height: 30vh;
+      }
+
+    .map-button {
+      float: right;
+      background-color: $primary !important;
+      }
+    }
+  }
+
+  @include laptop {
+   
+    flex-direction: row;
+
+    .tienda-content-section {
+      flex-direction: row;
+      justify-content: space-between;
+
+        .tienda-content {
+          width:100%;
+          max-width: 40rem;
+  
+          .tienda-map {
+            width: 50%;
+          }
+        }
+      }
+    }  
+  }
+
+  .location-template {
+    .entry-content {
+      p {
+        display: none;
+      }
+    }
+  }
+
+/* DATELLE MAP */
+
+.tienda-content-section {
+  width: $max-width;
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  
+}

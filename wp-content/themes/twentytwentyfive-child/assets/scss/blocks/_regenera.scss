@@ -1,0 +1,37 @@
+.regenera {
+    .head {
+        .wp-block-heading {
+            text-transform: uppercase;
+            font-weight: 400;
+            font-family: "Suisse-regular", Helvetica, Arial, sans-serif;
+        }
+    }
+
+    .wp-block-image.center {
+        margin: 2rem auto 3rem;
+        text-align: center;
+
+        img {
+            width: auto;
+            height: auto;
+        }
+    }
+
+    .wp-block-corousell {
+        .section-header {
+            .section-title {
+                color:$black;
+                font-size: 30px;
+                font-size: 3rem;
+                text-align: center;
+                line-height: 1.2;
+                margin-bottom: 3rem;
+            }
+        }
+    }
+
+    .talleres {
+        justify-content: center;
+        gap:1rem;
+    }
+}

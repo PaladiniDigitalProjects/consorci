@@ -1,0 +1,83 @@
+/* ACCORDION */
+
+.wp-block-moreless {
+	overflow: hidden;
+
+	input {
+	  position: absolute;
+	  opacity: 0;
+	  z-index: -1;
+	}
+
+	.acc-header {
+	  cursor: pointer;
+		margin-bottom:-1rem;
+		span.bl_more {
+			color:$primary;
+			text-align: right;
+			display: block;
+			padding-right: 3rem;
+		}
+		span.bl_less {
+			color:$primary;
+			display: none;
+			text-align: right;
+			padding-right: 3rem;
+		}
+	}
+
+	.acc-entry-content {
+	  max-height: 0;
+	  transition: all 1s;
+	}
+
+	input:checked + .acc-header {
+		span.bl_more {display: none;}
+		span.bl_less {display: block;}
+	}
+	input:checked + .acc-header::after {
+		// background: lime;
+	}
+	input:checked ~ .acc-entry-content {
+	  max-height: 100vh;
+	}
+
+
+	/* ADBISORY COMITTEE */
+	.gallery {
+	  display: flex;
+	  flex-direction: row;
+	  flex-wrap: wrap;
+		@include font-size(16);
+		line-height: 1.3;
+		font-weight: Light;
+
+		.gallery-item {
+			width: 50%;
+			padding: 1rem 2rem;
+			margin-bottom: 3rem;
+			text-align: center;
+			display: block;
+			opacity: 0.75;
+			&:hover {
+				opacity: 1;
+			}
+		}
+
+		@include tablet {
+			.gallery-item {
+				width: 33%;
+				padding: 1rem 2rem;
+			}
+		}
+
+		@include laptop{
+			.gallery-item {
+				width: 20%;
+				padding: 1rem 2rem;
+			}
+		}
+	}
+
+
+}

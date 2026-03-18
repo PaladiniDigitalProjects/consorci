@@ -1,0 +1,167 @@
+/* DESCARGAS */
+
+.wp-block-descargas {
+	border:0.1rem solid $primary;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	margin: 1rem 2rem;
+	width: calc(100% - 4rem);
+
+	.section-header {
+		border-bottom: none;
+		border-bottom: 0.1rem solid $primary;
+		margin: 0;
+		padding: 0 2rem;
+		min-height: 24rem;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+
+		.section-title {
+			margin: 0 auto 2rem;
+			line-height: 120%;
+			color:$primary;
+			@include font-size(34);
+		}
+
+		.wp-block-buttons {
+			display: block;
+			position: inherit;
+			padding: 0;
+			.wp-block-button a {
+				@include font-size(20);
+				padding: 1.5rem 2rem 1.35rem;
+				margin-bottom: 0;
+				&:hover {
+					color:$primary !important;
+				}
+			}
+		}
+	}
+
+	ul.post-list {
+		width: 100%;
+		background: $white;
+		border-radius: 0;
+		text-align: left;
+		margin: 0;
+		li {
+			list-style-type: none;
+			text-align: left;
+			border-bottom: 0.1rem solid $primary;
+			margin: 0;
+			padding-left: 4rem;
+			position: relative;
+
+			&:after {
+				content: ' ';
+				background: url("../img/ico-right-arrow.svg") center no-repeat;
+				background-size: 100% 100%;
+				position: absolute;
+				top: 1.9rem;
+				left: 0.8rem;
+				display: block;
+				width: 2.5rem;
+				height: 2rem;
+			}
+			
+			&:last-child {
+				border-bottom: none;
+			}
+			a {
+				color:$primary;
+				font-family: $fs-regular;
+				@include font-size(24);
+				line-height: 150%;
+				padding:1.35rem 1rem 1rem 0;
+				display: block;
+			}
+		}
+	}
+
+	.button {
+		padding: 0.65rem 2rem 0.45rem;
+		color:$white;
+		background-color:$primary;
+	}
+
+	@include tablet  {
+		max-width: 80rem;
+		flex-direction: row;
+		margin-left: 4rem;
+		.section-header {			
+			width: 50%;
+			border-bottom: none;
+			.section-title {
+				margin: 0 auto 1rem;
+				line-height: 1.2;
+			}
+		}
+
+		ul.post-list {
+			width: 50%;
+			background: $white;
+			border-radius: 0;
+			text-align: left;
+			li {
+				padding-left: 3rem;
+				&:after {
+					top: 1.9rem;
+					left: 0;
+				}
+			}
+		}
+	}
+}
+
+
+
+/* DESCARGA */
+
+// .wp-block-descarga {
+// 	text-align: center;
+// 	display: flex;
+// 	flex-direction: column;
+// 	padding: 2rem 1rem;
+
+// 	.entry-header {
+// 		text-align: left;
+
+// 		h3 {
+// 			margin: 0 5rem 1rem 0;
+// 			line-height: 1.2;
+// 		}
+// 	}
+
+// 	.entry-content {
+// 		background: $white;
+// 		border-radius: 1rem;
+// 		text-align: center;
+// 	}
+
+// 	.button {
+// 		padding: 0.65rem 2rem 0.45rem;
+// 	}
+
+// 	@include tablet  {
+// 		flex-direction: row;
+// 		.entry-header {
+// 			width: 65%;
+// 			padding-right: 10%;
+// 			text-align: left;
+// 			h3 {
+// 				margin: 0 10rem 3rem 0;
+// 				line-height: 1.2;
+// 			}
+// 		}
+
+// 		.entry-content {
+// 			width: 35%;
+// 			background: $white;
+// 			border-radius: 1rem;
+// 			text-align: center;
+// 		}
+
+// 	}
+// }

@@ -1,0 +1,53 @@
+@use 'sass:meta';
+@use './variables' as *;
+
+.editor-styles-wrapper {
+
+  @include meta.load-css('./generics');
+  @include meta.load-css('./header');
+  @include meta.load-css('./buttons');
+  @include meta.load-css('./animacions');
+  @include meta.load-css('./wpforms');
+  @include meta.load-css('./nav');
+  @include meta.load-css('./listados');
+  @include meta.load-css('./single');
+  @include meta.load-css('./category');
+  @include meta.load-css('./nutrities');
+  @include meta.load-css('./components');
+  @include meta.load-css('./event');
+  @include meta.load-css('./page');
+  @include meta.load-css('./localizaciones');
+  @include meta.load-css('./grid');
+
+  // LANDING PAGES
+
+  @include meta.load-css('./landings/desnudos');
+  @include meta.load-css('./landings/nutrities');
+
+  // BLOCKS
+
+  @include meta.load-css('./blocks/slider');
+  // @include meta.load-css('./blocks/block-menu');
+  // @include meta.load-css('./blocks/related');
+  // @include meta.load-css('./blocks/events');
+  // @include meta.load-css('./blocks/projects-slider');
+  @include meta.load-css('./blocks/carousell');
+  // @include meta.load-css('./blocks/ticker');
+  // @include meta.load-css('./blocks/mapa');
+  @include meta.load-css('./blocks/noticias');
+  @include meta.load-css('./blocks/relacionado');
+  // @include meta.load-css('./blocks/donaciones');
+  // @include meta.load-css('./blocks/descargas');
+  // @include meta.load-css('./blocks/redes-sociales');
+
+
+
+  // GENERIC
+  background: $white;
+  // border-top:1rem solid $primary;
+
+  a {
+    text-decoration: none;
+  }
+
+}

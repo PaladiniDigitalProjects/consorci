@@ -1,0 +1,40 @@
+.ghub-query-slider {
+    &.destacats{
+        .swiper-slide {
+    
+            @include laptop {
+                &:nth-child(2) {
+                    max-width: 30rem !important;
+                    min-height: 20rem !important;
+                }
+    
+                &:nth-child(4) {
+                    max-width: 25rem !important;
+                    min-height: 20rem !important;
+                }
+    
+                &:nth-child(3) {
+                    min-width:60rem !important;
+                    min-height: 36rem !important;
+                }
+                
+                &:nth-child(7) {
+                    max-width: 30rem !important;
+                    min-height: 20rem !important;
+                }
+    
+                &:nth-child(8) {
+                    max-width: 25rem !important;
+                    min-height: 20rem !important;
+                }
+    
+                &:nth-child(9) {
+                    min-width:60rem !important;
+                    min-height: 36rem !important;
+                }
+            }
+        
+        }
+       
+    }
+}

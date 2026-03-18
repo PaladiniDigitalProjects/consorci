@@ -1,0 +1,114 @@
+@use '../variables' as *;
+
+.wp-block-relacionado {
+  background:$tertiary;
+  padding: 3rem;
+  border-radius: 1rem;
+
+
+    .section-header {
+      h3 {
+        font-size: var(--wp--preset--font-size--x-large) !important;
+        font-weight: 200;
+        line-height: 100%;
+        color:$primary;
+        margin-bottom: 2rem;
+        padding-left: 0;
+      }
+    }
+    ul.post-list {
+      padding-left: 0;
+      li {
+        border-bottom:0.1rem solid $gray;
+        padding:1rem 0 3rem 0;
+        list-style-type: none;
+
+        &:last-child {
+          border-bottom: none;
+          padding-bottom: 0;
+        }
+
+        h4 {
+          padding-left: 0;
+          @include font-size(14);
+          line-height: 100%;
+          color:$primary;
+          font-weight: 500;
+    
+        }
+    
+        p {
+          @include font-size(12);
+          line-height: 135%;
+          padding: 0;
+          margin-left: 0;
+        }
+    
+        a {
+          @include font-size(12);
+          color:$primary;
+          position: relative;
+          transition: 0.3s;
+          text-decoration: none;
+          &:after {
+            content:' ';
+            display: block;
+            position: absolute;
+            width: 1rem;
+            height: 1rem;
+            top: 0.25rem;
+            right: -2rem;
+            background: url('../images/new-window.svg') no-repeat center center;
+          }  
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+
+      }
+  }
+}
+
+.contact {
+  background-color: $secondary;
+  border-radius: 1rem;
+  padding:2rem;
+
+  .block-title {
+    color:$white;
+    font-weight: 200;
+    margin-bottom: 0;
+  }
+  p {
+    color:$white;
+  }
+}
+
+
+/* MISIOSN COMPARTIDA */
+
+.search-nav > input{
+  border:1px solid $primary;
+  border-radius: 0.3rem;
+  @include font-size(12);
+  line-height: 100%;
+  padding: 1rem;
+  width: 95%;
+  background-color: $quaternary;
+  box-shadow: 3px 3px 3px $gray;
+  &::placeholder {
+    color:$primary;
+    font-weight: 200;
+  }
+}
+
+#myUL {
+  li {
+    a {
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

@@ -1,0 +1,1 @@
+.hide-desktop,.hide-phone,.hide-tablet{display:none}@media(min-width:768px){.hide-phone{display:block}}@media(min-width:1024px){.hide-tablet{display:block}.hide-desktop{display:none}}

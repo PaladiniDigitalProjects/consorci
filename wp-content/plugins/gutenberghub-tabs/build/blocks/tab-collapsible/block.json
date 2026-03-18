@@ -1,0 +1,54 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "ghub/tab-collapsible",
+  "version": "1.0.0",
+  "title": "Tab Collapsible",
+  "category": "ghub-products",
+  "description": "Hide content for inactive tabs buttons, revealing it only when the corresponding tab is active.",
+  "keywords": [
+    "collapsible",
+    "accordion",
+    "tab collapsible"
+  ],
+  "attributes": {},
+  "supports": {
+    "html": false,
+    "color": {
+      "text": true,
+      "background": true,
+      "gradients": true,
+      "link": true
+    },
+    "__experimentalBorder": {
+      "color": true,
+      "radius": true,
+      "style": true,
+      "width": true,
+      "__experimentalDefaultControls": {
+        "color": true,
+        "radius": true,
+        "style": true,
+        "width": true
+      }
+    },
+    "spacing": {
+      "padding": true
+    },
+    "typography": {
+      "fontSize": true,
+      "lineHeight": true
+    },
+    "align": true
+  },
+  "usesContext": [
+    "activeTabIndex"
+  ],
+  "ancestor": [
+    "ghub/tab-button"
+  ],
+  "textdomain": "gutenberghub-tabs",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css"
+}

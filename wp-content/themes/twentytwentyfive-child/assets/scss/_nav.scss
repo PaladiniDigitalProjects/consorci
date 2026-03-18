@@ -1,0 +1,328 @@
+@use './variables' as *;
+
+.menu-mobile {
+
+
+
+  .logo-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 1rem;
+
+    button {
+      margin:0 1rem 0 0 !important;
+      padding: 0 !important;
+    } 
+  }
+
+  .menu-contacto {
+    margin: 0;
+    padding: 0;
+
+    ul {
+      margin: 1rem 0;
+      padding: 0;
+      gap: 1rem;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      li {
+        margin: 0;
+        padding: 0;
+      }
+    }
+  }
+
+  .wp-block-navigation__responsive-container.is-menu-open {
+    position: absolute;
+    background-color: red;
+  }
+}
+.menu-desktop {
+  // background-color: gold;
+}
+
+// ICO MENU
+
+body {
+  &.active {
+    position: fixed;
+
+    .menu-content {
+      margin: 0 !important;
+    }
+  }
+}
+
+.wp-block-navigation__responsive-container-close,
+.wp-block-navigation__responsive-container-open{
+  background-color: transparent;
+  padding: 0 2rem;
+  svg {
+    height: 2rem !important;
+    width: 2rem !important;  
+
+    @include large {
+      height: 3rem !important;
+      width: 3rem !important;  
+    }
+  }
+}
+
+/* LENGUAGE NAV */
+/*
+header.wp-block-template-part {
+
+  > div > div{
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column !important;
+    height: 5.5rem;
+
+    .wp-block-site-logo {
+      max-width: 15rem;
+      left: 0;
+      top: 0.5rem;
+      position: absolute;
+    }
+
+    .wp-block-navigation-link {
+      display: none;
+    }
+
+    nav {
+      background-color: gold;
+      width: 100%;
+    }
+
+    &.is-menu-open {
+      height: 100% !important;
+      width: 100% !important;
+      position: absolute;
+      top:0;
+      bottom:0;
+      left: 0;
+      right: 0;
+      background-color: red;
+    }
+      .wp-block-navigation__responsive-container-open {
+    right: 0;
+    top: 0.5rem;
+    position: absolute;
+  }
+
+  }
+*/
+
+
+.menu-butons{
+  #btn-open,
+  #btn-close {
+    width: 30px;
+    height: 30px;
+  }
+
+  #btn-close {
+    display: none;
+    &:hover {
+      cursor:pointer;
+    }
+    &.active {
+      display: block;
+      z-index: 1;
+      position: absolute;
+      top: 2rem;
+      right: 1rem;
+      justify-content:center;
+      
+    }
+  }
+
+  @include large {
+      #btn-open,
+      #btn-close {
+        width: 0 !important;
+        height: 0 !important;
+        display: none;
+        img {
+          width: 0 !important;
+        }
+      }
+    }
+  }
+
+
+
+
+nav.menu {
+
+  .wp-block-navigation-item {
+    margin-left: 1rem;
+    a { 
+      color:$primary;
+      padding-bottom: 1.5rem;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+    
+    &.submenu {
+      position: relative;
+      padding-right: 1rem;
+      &:after {
+        content:' ';
+        background:url('../images/ICO_SUBMENU.svg') center right no-repeat;
+        background-size: 100%;
+        position: absolute;
+        display: block;
+        right: -0.1rem;
+        top: .5rem;
+        width: 0.8rem;
+        height: 0.6rem;
+      }
+      &:hover {
+        &:after {
+          content:' ';
+          transform: rotate(180deg);
+        }
+      }
+    }
+    &.current-menu-item {
+      padding-right: 0;
+      a {
+        color:$white !important;
+        border-radius: 1rem;
+        border:0.15rem solid $primary !important;
+        padding: 0.25rem 1rem 0.2rem;
+        transition: 0.2s;
+        background-color: $primary;
+        margin-top: -1.5rem;
+      }
+      &.submenu {
+        &:after {
+           content:none;
+        }
+      }
+    }
+  } 
+}
+
+nav.menu-contacto {
+  margin-top: 1.5rem;
+  .wp-block-navigation-item {
+    margin-left: 1.5rem;
+    a {
+      color:$gray !important;
+      font-weight: 200;
+      padding-bottom: 0;
+    }
+    &.btn-centro {
+      a {
+        font-weight: 500;
+        color:$primary !important;
+        border-radius: 1.5rem;
+        border:0.15rem solid $primary !important;
+        padding: 0.35rem 1rem 0.3rem 2.2rem; 
+        transition: 0.2s;
+        &:hover {
+          text-decoration: none;
+        }
+        &:after {
+          content:' ';
+          background: url('../images/ICO_UBICACION.svg') center right no-repeat;
+          background-size: 90%;
+          position: absolute;
+          display: block;
+          left: .7rem;
+          top: .4rem;
+          width: 1.2rem;
+          height: 1.4rem;
+        }
+      }
+      &:hover {
+        a {
+          background-color: $primary;
+          color:$white !important;
+          &:after {
+            filter: brightness(0) saturate(100%) invert(98%) sepia(100%) saturate(8%) hue-rotate(166deg) brightness(102%) contrast(104%);
+          }
+        }
+      }
+    }
+
+    &.btn-donar {
+      a {
+        font-weight: 500;
+        color:$white !important;
+        border-radius: 1.5rem;
+        border:0.15rem solid $primary !important;
+        padding: 0.35rem 2.2rem 0.3rem 1rem;
+        transition: 0.2s;
+        background-color: $primary;
+        &:hover {
+          text-decoration: none;
+        }
+        &:after {
+          content:' ';
+          background: url('../images/ICO_CORAZON.svg') center right no-repeat;
+          background-size: 100%;
+          position: absolute;
+          display: block;
+          right: .65rem;
+          top: .5rem;
+          width: 1.2rem;
+          height: 1.2rem;
+        }
+      }
+      &:hover {
+        a {
+          background-color: $white;
+          color:$primary !important;
+
+           &:after {
+            filter: brightness(0) saturate(100%) invert(38%) sepia(90%) saturate(3431%) hue-rotate(172deg) brightness(85%) contrast(101%);
+          }
+        }
+      }
+    }
+  }
+}
+
+
+/* SUBMENUS */
+
+header.wp-block-template-part {
+  .Sub_Menus {
+    ul.wp-block-navigation__container {
+      width: 100%;
+      height: 235px;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      li {
+        width: 49%;
+        &.MemoriaActividad {
+          display: none;
+        }
+      }
+    }
+
+  }
+}
+
+
+footer.wp-block-template-part  {
+  .Sub_Menus {
+    ul.wp-block-navigation__container {
+      width: 100%;
+      height: 200px;
+      flex-wrap: wrap;
+      gap: 0;
+      li {
+        width: 49%;
+      }
+    }
+
+  }
+}

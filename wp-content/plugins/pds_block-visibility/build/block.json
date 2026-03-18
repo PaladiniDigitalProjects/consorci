@@ -1,0 +1,58 @@
+{
+  "apiVersion": 2,
+  "name": "pds/block-visibility",
+  "title": "PDS Block Visibility",
+  "description": "Control block visibility for phone, tablet, and desktop.",
+  "category": "design",
+  "icon": "visibility",
+  "keywords": [
+    "visibility",
+    "responsive",
+    "device",
+    "conditional",
+    "editor"
+  ],
+  "attributes": {
+    "visibilityMobile": {
+      "type": "boolean",
+      "default": true
+    },
+    "visibilityDesktop": {
+      "type": "boolean",
+      "default": true
+    }
+  },
+  "supports": {
+    "html": false,
+    "align": true,
+    "anchor": true,
+    "innerBlocks": true,
+    "customClassName": true,
+    "multiple": true,
+    "color": {
+      "background": true,
+      "text": true
+    },
+    "spacing": {
+      "padding": true,
+      "margin": true
+    }
+  },
+  "editorScript": "file:./index.js",
+  "style": "file:./style.scss",
+  "editorStyle": "file:./editor.scss",
+  "example": {
+    "attributes": {
+      "visibilityMobile": true,
+      "visibilityDesktop": true
+    },
+    "innerBlocks": [
+      {
+        "name": "core/paragraph",
+        "attributes": {
+          "content": "This is a sample block content."
+        }
+      }
+    ]
+  }
+}

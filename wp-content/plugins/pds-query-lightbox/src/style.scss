@@ -1,0 +1,186 @@
+// PDS Query Lightbox styles
+
+// Overlay
+.pds-ql-overlay {
+	display: none;
+	position: fixed;
+	inset: 0;
+	background: rgba(0, 0, 0, 0.72);
+	z-index: 99999;
+	align-items: center;
+	justify-content: center;
+	padding: 1rem;
+
+	&.is-active {
+		display: flex;
+	}
+}
+
+// Lightbox container
+.pds-ql-lightbox {
+	background: #fff;
+	border-radius: 0.8rem;
+	max-width: 860px;
+	width: 100%;
+	max-height: 90vh;
+	overflow-y: auto;
+	overflow-x: hidden;
+	position: relative;
+	outline: none;
+}
+
+// Close button
+.pds-ql-close {
+	position: absolute;
+	top: 0.75rem;
+	right: 0.75rem;
+	background: rgba(0, 0, 0, 0.12);
+	border: none;
+	border-radius: 50%;
+	width: 2rem;
+	height: 2rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	z-index: 10;
+	color: #fff;
+	transition: background 0.2s;
+
+	&:hover {
+		background: rgba(0, 0, 0, 0.22);
+	}
+}
+
+// Featured image
+.pds-ql-thumb {
+	width: calc(100% - 2rem);
+	max-height: 380px;
+	overflow: hidden;
+	background: #f0f0f0;
+	border-radius: 0.5rem;
+	margin: 1rem;
+
+	img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		display: block;
+	}
+}
+
+// Content area
+.pds-ql-content {
+	padding: 1.5rem 2rem 2rem;
+}
+
+.pds-ql-title {
+	margin: 0 0 1rem;
+	font-size: 1.6rem;
+	font-weight: 700;
+	line-height: 1.2;
+	padding-right: 2rem; // avoid overlap with close button (no thumb case)
+	color: #0D3B5D;
+}
+
+.pds-ql-text {
+	color: #0D3B5D;
+	line-height: 1.7;
+	font-size: 1rem;
+	margin-bottom: 1.5rem;
+
+	img {
+		max-width: 100%;
+		height: auto;
+	}
+}
+
+// CTA link
+.pds-ql-link {
+	display: inline-block;
+	padding: 0.6em 1.5em;
+	background: #F40000;
+	color: #fff;
+	text-decoration: none;
+	border-radius: 0.4rem;
+	font-weight: 700;
+	font-size: 0.95rem;
+	transition: opacity 0.2s;
+
+	&:hover {
+		opacity: 0.85;
+		color: #fff;
+	}
+}
+
+// Pointer cursor on post cards
+[data-pds-lightbox] li {
+	cursor: pointer;
+}
+
+// Skeleton loader — LinkedIn-style shimmer
+@keyframes pds-ql-shimmer {
+	0%   { background-position: 200% 0; }
+	100% { background-position: -200% 0; }
+}
+
+%skeleton-base {
+	background-color: #e0e0e0;
+	background-image: linear-gradient(
+		100deg,
+		#e0e0e0 0%,
+		#e0e0e0 35%,
+		#f5f5f5 48%,
+		#ffffff 50%,
+		#f5f5f5 52%,
+		#e0e0e0 65%,
+		#e0e0e0 100%
+	);
+	background-size: 200% 100%;
+	animation: pds-ql-shimmer 1.6s infinite ease-in-out;
+	border-radius: 0.4rem;
+}
+
+.pds-ql-skeleton {
+	.pds-ql-sk-thumb {
+		@extend %skeleton-base;
+		width: 100%;
+		height: 280px;
+		border-radius: 0.8rem 0.8rem 0 0;
+	}
+
+	.pds-ql-sk-body {
+		padding: 1.5rem 2rem 2rem;
+		display: flex;
+		flex-direction: column;
+		gap: 0.75rem;
+	}
+
+	.pds-ql-sk-title {
+		@extend %skeleton-base;
+		height: 1.8rem;
+		width: 65%;
+	}
+
+	.pds-ql-sk-line {
+		@extend %skeleton-base;
+		height: 0.9rem;
+		width: 100%;
+
+		&--short { width: 45%; }
+		&--mid   { width: 72%; }
+	}
+}
+
+// States
+.pds-ql-loading,
+.pds-ql-msg {
+	padding: 3rem 2rem;
+	text-align: center;
+	color: #666;
+	font-size: 1rem;
+}
+
+.pds-ql-error {
+	color: #c00;
+}

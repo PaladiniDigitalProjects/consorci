@@ -1,0 +1,411 @@
+@use '../variables' as *;
+
+.nutrities {
+    p {
+        padding-right: 0 !important;
+
+    }
+
+    .col_apertura {
+        position: relative;
+        .wp-block-column {
+            order:1;
+            &:first-child {
+                order: 2;
+            }
+            &:last-child {
+                order: 3;
+            }
+        }
+
+        @include tablet {
+            .wp-block-column {
+                order:2;
+                &:first-child {
+                    order: 1;
+                }
+                &:last-child {
+                    order: 3;
+                }
+            }
+
+        }
+    }
+
+    h1.wp-block-post-title {
+      
+      line-height: 120%;
+      margin-bottom: 1rem;
+    }
+
+    h6.antetitol {
+        border-radius: 3px;
+        display:inline-block;
+        text-transform: uppercase;
+        
+        letter-spacing: 0.2rem;
+        margin-bottom: 2rem;
+        &.has-background {
+            padding: 0.7rem 1rem 0.5rem 1rem;
+        }
+    }
+
+    .logo-apertura {
+        width: 100%;
+        height: auto;
+        max-width: 26rem;
+        position: absolute;
+        top: 4rem;  
+    }
+
+    .noi {
+        line-height: 0;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+    .wp-block-buttons.secciones {
+        position: inherit;
+        flex-direction: column;
+        background-color: #F9F8FF;
+        .wp-block-button {
+            margin: 0;
+            width: calc(100% - 4rem);
+            position: relative;
+            z-index: 1;
+            transition: 0.35s;
+            background-image: url('../img/Recetas.svg'), url('../img/white.png');
+            background-position: right center, left bottom;
+            background-repeat: no-repeat, repeat;
+            background-size: 10rem 10rem, 100% 100%;
+            border-radius: 1rem 5rem 5rem 1rem !important;
+            
+            &:hover {
+                cursor: pointer;
+                scale: 110%;
+            }
+
+            &:first-child {
+                background-image: url('../img/Capsulas.svg'), url('../img/white.png');
+                background-position: right center, left bottom;
+                background-repeat: no-repeat, repeat;
+                background-size: 10rem 10rem, 100% 100%;
+            }
+
+            &:last-child {
+                background-image: url('../img/Seguridad.svg'), url('../img/white.png');
+                background-position: right center, left bottom;
+                background-repeat: no-repeat, repeat;
+                background-size: 10rem 10rem, 100% 100%;
+            }
+
+            &:nth-child(3n) {
+                background-image: url('../img/Cocina.svg'), url('../img/white.png');
+                background-position: right center, left bottom;
+                background-repeat: no-repeat, repeat;
+                background-size: 10rem 10rem, 100% 100%;
+            }
+
+            .wp-block-button__link {
+                box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.2);
+                text-align: left;
+                padding:0;
+                line-height: 120%;
+                height: 10rem;
+                border-radius: 1rem 5rem 5rem 1rem !important;
+                
+                letter-spacing: 0;
+                font-size: 2rem !important;
+                padding: 0 10rem 0 2rem;
+                display: block;
+                background-color: transparent !important;
+            }            
+
+            @include laptop {
+                margin-right: 2rem;
+                width: calc(50% - 2rem);
+            }
+            
+            @include large {
+                margin-right: 2rem;
+                width: calc(25% - 4rem);
+            }
+        }
+
+        @include laptop {
+            background-color: transparent;
+            z-index: 111;
+            margin:-7rem auto -6rem !important;
+            flex-direction: row;
+            justify-content: flex-start;
+
+            &.colum {
+                flex-direction: column !important;
+            }
+        }
+       
+        &.is-vertical {
+            position: relative;
+            margin:0 !important;
+            .wp-block-button {
+                margin:0 0 2rem 0;
+                width: 100%;
+                border-radius: 1rem 5rem 5rem 1rem !important;
+                
+                .wp-block-button__link {
+                    text-align: left;
+                    width: 100%;
+                    padding: 1rem 10rem 1rem 2rem;
+                    border-radius: 1rem 5rem 5rem 1rem !important;
+                }
+            }
+        }
+    }
+
+    .sponsors {
+        margin: 4rem 0;
+        border-radius: 1rem;
+        box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.2);
+        background-color: $white;
+        padding: 2rem 4rem;
+        img {
+            width: 100%;
+            height: auto;
+            // margin-bottom: 4rem;
+        }
+
+        &.minH {
+            min-height: 39.5rem;
+        }
+    }
+
+    img {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .listado-recetas {
+        ul {
+            margin:0;
+            padding: 0;
+            display: grid;
+            column-gap: 2rem;
+            row-gap: 2rem;
+            grid-template-columns: auto auto auto;
+            li {
+                list-style-type: none;
+                margin: 1rem;
+                background-color:#557f00;
+                border-radius: 1rem;
+                box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.2);
+                transition: 0.25ms;
+
+                img {
+                    border-radius: 1rem 1rem 0 0 !important;
+                    height: 280px;
+                }
+
+                h2 {
+                    padding: 2rem 1.5rem !important;
+                    
+                    border-radius: 0 0 1rem 1rem;
+                    background-color: #557f00;
+
+                    > a {
+                        
+                        font-size: 2rem !important;
+                        color:$white;
+                    }
+                }
+                &:hover {
+                    transform: scale(110%);
+                }
+            }
+        }
+
+        &.utensilios {
+            ul {
+                li {
+                    h2 {
+                        background-color: #FF8600
+                    }
+                }
+            }
+        }
+    }
+
+    h1 {
+        
+        font-size: 4rem !important;
+        color:$gray !important;
+        letter-spacing: 0.05rem;
+    }
+
+    .ingredientes {
+        margin: 1.5rem;
+        border-radius:1rem;
+        background-color: #eaede8;
+
+        &:not(:first-child) {
+            margin-left: 1.5rem !important;
+        }
+
+        .featured > img{
+            border-radius: 1rem; 
+        }
+
+        .wp-block-heading {
+            color: $gray;
+            font-size: 2.4rem !important;
+            width: calc(100% - 4rem);
+            margin: 2rem 2rem 0 2rem;
+        }
+
+        ul.wp-block-list {
+                margin: 0 2rem;
+                width: calc(100% - 4rem);
+                color:$gray;
+            li {
+                font-size: 2rem;
+                &::marker {
+                    color:$primary !important;
+                }
+            } 
+        }
+
+        .wp-block-group {
+            width: 100%;
+            padding: 2rem 2rem 0 2rem;
+
+
+            .btn-descargar {
+                margin: 2rem auto;
+                transition: 0.35s;
+                &:hover {
+                    transform: scale(110%);
+                }
+            }
+        }
+
+        .wp-block-buttons {
+            margin: 2rem 2rem 0 2rem;
+        }
+    }
+
+    .pasopaso {
+        margin: 1.5rem;
+        background-color: #eaede8;
+        padding: 2rem;
+        border-radius: 1rem;
+
+        h1 {
+            
+            font-size: 4rem !important;
+            color:$primary;
+            letter-spacing: 0.05rem;
+            max-width: 440px;
+            margin-left: 2rem;
+        }    
+
+        .wp-block-heading {
+            color: $gray !important;
+            font-size: 2.4rem !important;
+            width: calc(100% - 4rem);
+            margin: 4rem 2rem 0rem 2rem;
+        }
+
+        ul, ol {
+            li {
+                font-size: 2rem;
+                &::before {
+                    color:$primary;
+                }
+            }    
+        }
+
+        .ico-pasopaso {
+            width: 100%;
+            text-align: left;
+            justify-content: flex-start;
+            column-gap: 3rem;
+            padding: 0 2rem;
+            
+            figure {
+                width: 30%;
+            }
+            .wp-block-group {
+                width: 70%;
+            }
+        }
+        @include tablet {
+            margin-left: 0;
+        }
+    }
+
+    .relacionados {
+        .wp-block-heading {
+            color: $primary !important;
+            font-size: 2.4rem !important;
+            padding-left: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .wp-block-post {
+            color:$white !important;
+            font-size: 2.4rem !important;
+            letter-spacing: 0.05rem;
+            background-color: #557f00;
+        }
+    }
+
+    .capsulaFormativa {
+        border-radius: 1rem;
+        background-color: #ffffff;
+        .wp-block-heading {
+            padding: 0;
+            margin: 0;
+            color: $primary;
+        }
+
+        p {
+            padding: 0;
+            margin: 0;
+            color: $gray;
+        }
+        .wp-block-group {
+            &.is-vertical {
+                margin: 2rem !important;
+            }
+        }
+    }
+
+    .wp-block-ghub-tab-button > p {
+        padding-bottom: 0 !important;
+    }
+
+    .wp-block-image {
+        padding: 0 !important;
+    }
+
+
+    .gutenberghub-query-taxonomy-menu {
+        button.wp-element-button {
+            letter-spacing: 0.025rem !important;
+        }
+    }
+
+}
+
+// END 
+
+.ColumnRight {
+    .wp-block-column:first-child { order: 2 }
+    .wp-block-column:last-child { order: 1 }
+
+        @include laptop {
+            .wp-block-column:first-child { order: 1 }
+    
+            .wp-block-column:last-child { order: 2 } 
+        }
+    }
+

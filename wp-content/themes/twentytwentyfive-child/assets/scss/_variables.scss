@@ -1,0 +1,87 @@
+$primary:#007FAD;
+$secondary:#2FA2B8;
+$tertiary:#FDF1E6;
+$quaternary:#E0F7FF;
+$CTA:#DD1115;
+$white:#ffffff;
+$black:#000000;
+$softblack:#343434;
+$gray:#9c9c9c;
+
+
+// BREAK POINTS
+
+$mobileS: 320px; //320px
+$mobileM: 375px; //375px
+$mobileL: 425px; // 425px
+$tablet: 768px; // 768px
+$tabletH: 1024px; // 1024px
+$laptop: 1024px; // 1024px
+$large: 1240px; // 1240px
+$xlarge: 1600px; // 1900px
+$max-width: 1420px; // $max-width: 100%;
+
+
+@media all and (device-width: 768px) and (device-height: 1024px) and (orientation:portrait) {
+  .ipad-portrait { color: red; } /* your css rules for ipad portrait */
+}
+@media all and (device-width: 1024px) and (device-height: 768px) and (orientation:landscape) {
+  .ipad-landscape { color: blue; } /* your css rules for ipad landscape */
+}
+
+
+@mixin mobile {
+  @media only screen and (min-width: $mobileS) {
+    @content;
+  }
+}
+
+@mixin mobileM {
+  @media only screen and (min-width: $mobileM) {
+    @content;
+  }
+}
+
+@mixin mobileL {
+  @media only screen and (min-width: $mobileL) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media only screen and (min-width: $tablet) {
+    @content;
+  }
+}
+
+@mixin tabletH {
+  @media all and (device-width: $tablet) and (device-height: $tabletH) and (orientation:landscape) {
+    @content;
+  }
+}
+
+@mixin laptop {
+  @media only screen and (min-width: $laptop) {
+    @content;
+  }
+}
+
+@mixin large {
+  @media only screen and (min-width: $large) {
+    @content;
+  }
+}
+
+
+@mixin xlarge {
+  @media only screen and (min-width: $xlarge) {
+    @content;
+  }
+}
+
+/* REM FONT SIZE */
+
+@mixin font-size($sizeValue:1) {
+  font-size: calc($sizeValue * 1) + px;
+  font-size: calc($sizeValue / 10) + rem;
+}

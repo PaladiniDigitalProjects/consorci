@@ -1,0 +1,24 @@
+.category-list {
+  position: relative;
+  max-width: 80rem !important;
+  margin: 0 auto !important;
+
+  .acc-header {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 0;
+    span.bl_more,
+    span.bl_less {
+      padding: 0;
+    }
+  }
+
+  .entry-content {
+    margin-top: 6%;
+  }
+
+  input:checked ~ .acc-entry-content {
+    max-height: 100%;
+  }
+}

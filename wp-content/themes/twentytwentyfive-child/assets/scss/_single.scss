@@ -1,0 +1,34 @@
+@use './variables' as *;
+
+.single {
+    // background-color: lime !important;
+    main {
+        position: relative;
+        margin-top: 0 !important;
+        // &:before {
+        //     position: absolute;
+        //     top:0;
+        //     content:' ';
+        //     left: 50%;
+        //     transform: translateX(-50%);
+        //     display: block;
+        //     width: 100%;
+        //     height: 0.15rem;
+        //     background-color: $primary;
+        //     max-width: var(--wp--style--global--wide-size);
+        // }
+
+        p > a {
+            color:$primary;
+            text-decoration: none;
+            transition: 0.35s;
+
+            &:hover {
+                border-bottom: 0.1rem solid $primary;
+            }
+        }
+    }
+
+    
+
+}

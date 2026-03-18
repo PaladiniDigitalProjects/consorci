@@ -1,0 +1,186 @@
+.editorial-block-team {
+
+  .fp-tableCell {
+    vertical-align: top;
+    padding-top: 15vh;
+  }
+    
+  
+  .wp-block-cover__inner-container {
+    // vertical-align: top;
+    z-index: 51;
+    padding-right:0;
+
+    .subtitle {
+      max-width: 80%;
+    }
+
+  }
+
+  .image-map-team {
+    display:none;
+    width: 100%;
+    max-width: 86rem;
+    margin:0 auto;
+    line-height: 0;
+    font-size:0;
+    position: absolute;
+    bottom: 0;
+    left:0;
+    right: 0;
+    z-index: 50;
+    // cursor: url('../img/cursor.svg'),auto;
+    // &:hover {
+    //   cursor: url('../img/cursor.svg'),auto;
+    // }
+  }
+
+  .post-list {
+    display: none;
+    z-index: 1;
+
+    .team-featured {
+      z-index: 100;
+      border-radius: 50%;
+      color: $black;
+      font-weight: 400;
+      transition: 0.5s;
+                 
+      &.active {
+        opacity: 1;
+      }
+
+      h3 {
+        @include font-size(18);
+        font-weight: 400;
+        text-transform: uppercase;
+        text-align: left;
+        margin-bottom: 0.5rem;
+      }
+      strong {
+        @include font-size(16);
+        line-height: 1;
+        text-align: left;
+        display: block;
+        font-weight: 900;
+        margin-left: 0.5rem;
+      }
+    }
+  }
+
+  @include mobileL {
+    min-height: inherit;
+
+  }
+
+  @include mobileM {
+  .fp-tableCell {
+    vertical-align: top;
+    padding-top: 24vh;
+  }
+
+     h2.page-title {
+      margin-top: 0;
+    }
+  }
+
+  @include tablet {
+
+    .fp-tableCell {
+    padding-top: 15vh;
+  }
+
+    .image-map-team,
+    .post-list {
+       display: block;
+    }
+
+    
+    .post-list {
+      position: absolute;
+      top:0;
+      right: 0;
+      width: 30vw;
+      height: 100vh;
+      background-image: 100% !important;
+      
+      .team-featured {
+        position: absolute;
+        top: 12.3vw;
+        left: 1.4vw;
+        width: 22vw;
+        height: 22vw;
+        border-radius: 50%;
+        border-radius: 50%;
+        padding: 3.5rem 0 3rem 1rem;
+        opacity:0;
+       }
+    }
+
+  }
+
+  @include laptop {
+
+    .image-map-team {
+      max-width: 88rem;
+    }
+
+    .post-list {
+      .team-featured {
+        padding: 6rem 0 3rem 1.5rem;
+        h3 {
+          @include font-size(25);
+          margin-bottom: 0.75rem;
+        }
+        strong {
+          @include font-size(20);
+          margin-left: 0.5rem;
+          line-height: 1;
+        }
+      }
+    }
+  }
+
+  @include large {
+
+    .image-map-team {
+      max-width: 120rem;
+    }
+
+    &:after {
+      background-position: top right;
+    }
+
+    .post-list {
+      .team-featured {
+        padding: 10rem 0 3rem 3rem;
+        h3 {
+          @include font-size(30);
+        }
+        strong {
+          @include font-size(24);
+        }
+      }
+    }
+  }
+
+  @include xlarge {
+
+    .fp-tableCell {
+      padding-top: 25vh;
+     }
+
+    .post-list {
+      .team-featured {
+        padding: 25% 10% 0 10%;
+        h3 {
+          @include font-size(40);
+        }
+        strong {
+          @include font-size(34);
+        }
+      }
+    }
+    
+  }
+}

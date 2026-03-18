@@ -1,0 +1,41 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "ghub/tab-content",
+  "version": "1.0.0",
+  "title": "Tab Content",
+  "category": "ghub-products",
+  "description": "Display unique content within each tab, allowing for structured information presentation.",
+  "keywords": [
+    "tab content",
+    "content"
+  ],
+  "attributes": {},
+  "parent": [
+    "ghub/tab-contents-container"
+  ],
+  "supports": {
+    "html": false,
+    "color": {
+      "text": true,
+      "background": true,
+      "gradients": true,
+      "link": true
+    },
+    "spacing": {
+      "padding": true
+    },
+    "typography": {
+      "fontSize": true,
+      "lineHeight": true
+    },
+    "align": true
+  },
+  "usesContext": [
+    "activeTabIndex"
+  ],
+  "textdomain": "gutenberghub-tabs",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css"
+}
