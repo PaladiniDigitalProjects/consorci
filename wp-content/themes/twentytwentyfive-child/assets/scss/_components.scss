@@ -2,31 +2,33 @@
 
 /* SJD TABS */
 .tabs-banner {
-  position: relative;   
-    .gutenberghub-tab-buttons-container {
-      position: absolute;
-      top: 1rem;
-      right: 1rem;
+  position: relative;
+
+  .gutenberghub-tab-buttons-container {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 100%;
+    z-index: 1;
+
+    .wp-block-ghub-tab-button {
       width: 100%;
-      z-index: 1;
-  
-      .wp-block-ghub-tab-button {
-        width: 100%;
-        max-width: 15rem;
+      max-width: 15rem;
+      border-radius: 0.5rem;
+      border: 0.2rem solid $white;
+      padding: 0.5rem;
+
+      &.gutenberghub-active-tab {
+        border: 0.2rem solid $primary;
         border-radius: 0.5rem;
-        border:0.2rem solid $white;
         padding: 0.5rem;
-          &.gutenberghub-active-tab {
-            border:0.2rem solid $primary;
-            border-radius: 0.5rem;
-            padding: 0.5rem;
-            box-shadow: 0 0 10px 0 rgba(0,0,0,0.65);
-            -webkit-box-shadow: 0 0 10px 0 rgba(0,0,0,0.65);
-            -moz-box-shadow: 0 0 10px 0 rgba(0,0,0,0.65);
-        }
+        box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.65);
+        -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.65);
+        -moz-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.65);
       }
     }
   }
+}
 
 
 
@@ -44,246 +46,263 @@
   overflow-y: auto;
   max-height: 74rem;
 
- 
 
-      .pds-tiendas-toolbar {
-        width: 100%;
-        margin-bottom: 2rem;
-        justify-content: left;
-        align-items: center;
-        gap: 0;
 
-        h3 {
-          width: 20%;
-          font-size: var(--wp--preset--font-size--large) !important;
-          color:$primary;
-          font-style: normal;
-          font-weight: 600;
-          margin-bottom: 0;
-          display: none;
-        }
-        .pds-map-filters {
-          width: 80%;
-          .mlf-filters-select {
-            font-weight: bold;
-            padding: 0.5rem 2rem;
-          }
-        }
-
-        .pds-view-switcher {
-          width: 20%;
-          display: flex;
-          flex-direction: row-reverse;
-          align-content:flex-end;
-        }
-
-      }
-      
-      .pds-tiendas-list {
-          padding: 0;
-         
-          &.list {
-            .pds-tiendas-row {
-              padding: 0;
-              border-bottom: 1px solid $primary;
-            
-            .pds-col-1 {
-              display: flex;
-              flex-direction: row;
-              width: 40%;
-              .pds-col-thumb {
-                width: 100%;
-                max-width: 8rem;
-                line-height: 0;
-                > img {
-                  border-radius: 0.2rem;
-                }
-              }
-              .pds-col-text {
-                width: 100%;
-                padding:0 2rem 0 1rem;
-                .pds-title {
-                  font-size: 1rem;
-                  line-height: 1.2;
-                }
-              }
-            }
-            .pds-col-2 {
-              width: 30%;
-              p {
-                margin: 0 0 0.5rem 0;
-              }
-            }
-            .pds-col-3 {
-              width: 30%;
-            }
-          }
-        }
-
-        &.grid {
-          gap: 2rem;
-          .pds-tiendas-row {
-            border:0;
-            padding:0;
-            background-color: transparent;
-
-            .pds-col-thumb {
-              margin-bottom: 1rem;
-              > img {
-                border-radius: .5rem;
-              }
-            }
-
-            .pds-title {
-              font-size: 1rem;
-              font-weight: bold;
-              line-height: 1.2;
-              color: $primary;
-            }
-
-            p {
-              margin: 0 0 0.5rem 0;
-              color: $primary;
-            }
-
-            .pds-col-1,
-            .pds-col-2,
-            .pds-col-3 {
-              color: $primary;
-            }
-
-            .pds-col-2,
-            .pds-col-3 {
-              display: none;
-            }
-          }
-        } 
-      }
-
-  }
-
-  /* MAPA */
-
-  .wp-block-pds-map-locations-filter-map-locations-filter {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+  .pds-tiendas-toolbar {
+    width: 100%;
+    margin-bottom: 2rem;
+    justify-content: left;
+    align-items: center;
+    gap: 0;
 
     h3 {
       width: 20%;
       font-size: var(--wp--preset--font-size--large) !important;
-      color:$primary;
+      color: $primary;
       font-style: normal;
       font-weight: 600;
-      margin:0 0 2rem 0;
-    }
-
-    .pds-map-toolbar {
-      width: 80%;
-    }
-
-    .mlf-content-area {
-      width: 100%;
-    }
-
-    .mlf-filters {
-      width: 100%;
-      .mlf-search-wrapper {
-        margin-right: 10rem;
-      }
+      margin-bottom: 0;
+      display: none;
     }
 
     .pds-map-filters {
+      width: 80%;
+
       .mlf-filters-select {
         font-weight: bold;
         padding: 0.5rem 2rem;
       }
     }
 
+    .pds-view-switcher {
+      width: 20%;
+      display: flex;
+      flex-direction: row-reverse;
+      align-content: flex-end;
+    }
+
   }
 
-  /* EVENTS */
+  .pds-tiendas-list {
+    padding: 0;
 
-  .tribe-events-widget-events-list__events {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    gap: 5rem;
-    .tribe-events-widget-events-list__event-row {
-      width: 50%;
-      color:$primary;
+    &.list {
+      .pds-tiendas-row {
+        padding: 0;
+        border-bottom: 1px solid $primary;
 
-      .tribe-events-widget-events-list__event-date-tag-datetime {
-        width: 100% !important;
-        border-right: 1px solid $primary !important;
-        padding-right: 0.5rem !important;
-        margin-right: 0.5rem !important;
-      }
-      .tribe-events-widget-events-list__event-wrapper {
-        width: 70% !important;
-      }
+        .pds-col-1 {
+          display: flex;
+          flex-direction: row;
+          width: 40%;
 
-      .tribe-events-widget-events-list__event-datetime,
-      .tribe-events-widget-events-list__event-title-link,
-      .tribe-events-widget-events-list__event-date-tag-daynum,
-      .tribe-events-widget-events-list__event-date-tag-month {
-        color:$primary !important;
-      }
+          .pds-col-thumb {
+            width: 100%;
+            max-width: 8rem;
+            line-height: 0;
 
-      .tribe-events-widget-events-list__event-date-tag-daynum {
-        font-size: 3.2rem !important;
-        font-weight:200;
-      }
+            >img {
+              border-radius: 0.2rem;
+            }
+          }
 
-      .tribe-events-widget-events-list__event-date-tag-month {
-        font-size: 1.25rem;
-      }
+          .pds-col-text {
+            width: 100%;
+            padding: 0 2rem 0 1rem;
 
-      .tribe-events-widget-events-list__event-datetime {
-        font-size: 1rem;
-      }
-
-      .tribe-events-widget-events-list__event-header {
-        padding-left: 1rem;
-        .tribe-events-widget-events-list__event-title-link {
-          font-size: 2rem;
-          line-height: 1.2;
-          font-weight:500;
-          padding-left: 0;
-          margin-top: 0.5rem;
-          &:hover {
-            color:$primary;
+            .pds-title {
+              font-size: 1rem;
+              line-height: 1.2;
+            }
           }
         }
+
+        .pds-col-2 {
+          width: 30%;
+
+          p {
+            margin: 0 0 0.5rem 0;
+          }
+        }
+
+        .pds-col-3 {
+          width: 30%;
+        }
       }
+    }
 
+    &.grid {
+      gap: 2rem;
 
-      
+      .pds-tiendas-row {
+        border: 0;
+        padding: 0;
+        background-color: transparent;
+
+        .pds-col-thumb {
+          margin-bottom: 1rem;
+
+          >img {
+            border-radius: .5rem;
+          }
+        }
+
+        .pds-title {
+          font-size: 1rem;
+          font-weight: bold;
+          line-height: 1.2;
+          color: $primary;
+        }
+
+        p {
+          margin: 0 0 0.5rem 0;
+          color: $primary;
+        }
+
+        .pds-col-1,
+        .pds-col-2,
+        .pds-col-3 {
+          color: $primary;
+        }
+
+        .pds-col-2,
+        .pds-col-3 {
+          display: none;
+        }
+      }
     }
   }
 
-  .tribe-events-widget-events-list__view-more {
-    display: none;
+}
+
+/* MAPA */
+
+.wp-block-pds-map-locations-filter-map-locations-filter {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  h3 {
+    width: 20%;
+    font-size: var(--wp--preset--font-size--large) !important;
+    color: $primary;
+    font-style: normal;
+    font-weight: 600;
+    margin: 0 0 2rem 0;
   }
+
+  .pds-map-toolbar {
+    width: 80%;
+  }
+
+  .mlf-content-area {
+    width: 100%;
+  }
+
+  .mlf-filters {
+    width: 100%;
+
+    .mlf-search-wrapper {
+      margin-right: 10rem;
+    }
+  }
+
+  .pds-map-filters {
+    .mlf-filters-select {
+      font-weight: bold;
+      padding: 0.5rem 2rem;
+    }
+  }
+
+}
+
+/* EVENTS */
+
+.tribe-events-widget-events-list__events {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 5rem;
+
+  .tribe-events-widget-events-list__event-row {
+    width: 50%;
+    color: $primary;
+
+    .tribe-events-widget-events-list__event-date-tag-datetime {
+      width: 100% !important;
+      border-right: 1px solid $primary !important;
+      padding-right: 0.5rem !important;
+      margin-right: 0.5rem !important;
+    }
+
+    .tribe-events-widget-events-list__event-wrapper {
+      width: 70% !important;
+    }
+
+    .tribe-events-widget-events-list__event-datetime,
+    .tribe-events-widget-events-list__event-title-link,
+    .tribe-events-widget-events-list__event-date-tag-daynum,
+    .tribe-events-widget-events-list__event-date-tag-month {
+      color: $primary !important;
+    }
+
+    .tribe-events-widget-events-list__event-date-tag-daynum {
+      font-size: 3.2rem !important;
+      font-weight: 200;
+    }
+
+    .tribe-events-widget-events-list__event-date-tag-month {
+      font-size: 1.25rem;
+    }
+
+    .tribe-events-widget-events-list__event-datetime {
+      font-size: 1rem;
+    }
+
+    .tribe-events-widget-events-list__event-header {
+      padding-left: 1rem;
+
+      .tribe-events-widget-events-list__event-title-link {
+        font-size: 2rem;
+        line-height: 1.2;
+        font-weight: 500;
+        padding-left: 0;
+        margin-top: 0.5rem;
+
+        &:hover {
+          color: $primary;
+        }
+      }
+    }
+
+
+
+  }
+}
+
+.tribe-events-widget-events-list__view-more {
+  display: none;
+}
 
 /* TAGS */
 
 .taxonomy-category {
   a[rel="tag"] {
-      background-color: $white;
-      border:0.1rem solid $primary;
-      padding: 0.5rem 1rem 0.45rem 1rem;
-      line-height: 100%;
-      margin: 0.5rem 0.5rem 0 0;
-      border-radius: 2rem;
-      text-decoration: none;
-      transition: 0.35s;
-      font-weight: 500;
-      display: inline-block;
-      &:hover {
-          background-color: $primary;
-          color:$white;
-      }
+    background-color: $white;
+    border: 0.1rem solid $primary;
+    padding: 0.5rem 1rem 0.45rem 1rem;
+    line-height: 100%;
+    margin: 0.5rem 0.5rem 0 0;
+    border-radius: 2rem;
+    text-decoration: none;
+    transition: 0.35s;
+    font-weight: 500;
+    display: inline-block;
+
+    &:hover {
+      background-color: $primary;
+      color: $white;
+    }
   }
 
   .wp-block-post-terms__separator {
@@ -297,260 +316,401 @@
 .wp-block-categories-list {
   list-style-type: none;
   display: flex;
-  flex-wrap:wrap;
-  flex-direction:row;
+  flex-wrap: wrap;
+  flex-direction: row;
   padding-left: 0;
+
   .cat-item {
-      background-color: $white;
-      border:0 solid $primary;
-      padding: 0.5rem 1rem 0.45rem 1rem;
-      line-height: 100%;
-      margin: 0.65rem 0.5rem 0 0;
-      border-radius: 2rem;
+    background-color: $white;
+    border: 0 solid $primary;
+    padding: 0.5rem 1rem 0.45rem 1rem;
+    line-height: 100%;
+    margin: 0.65rem 0.5rem 0 0;
+    border-radius: 2rem;
+    text-decoration: none;
+    transition: 0.35s;
+    font-weight: 500;
+    display: inline-block;
+
+    a {
+      color: $primary;
       text-decoration: none;
-      transition: 0.35s;
-      font-weight: 500;
-      display: inline-block;
+    }
+
+    &:hover {
+      background-color: $primary;
+      color: $white;
+
       a {
-          color:$primary;
-          text-decoration: none;
+        color: $white;
+        text-decoration: none;
       }
-      &:hover {
-          background-color: $primary;
-          color:$white;
-          a {
-              color:$white;
-              text-decoration: none;
-          }
-      }
+    }
   }
 }
 
 /* TAGS LISTADO DE NOTICIAS */
 
 .noticia .taxonomy-category {
-    a[rel="tag"] {
-        background-color: transparent;
-        border:none;
-        padding: 0;
-        margin: 0.5rem 1rem 0 0;
-        border-radius: 0;
-        text-decoration: none;
-        transition: 0.35s;
-        font-weight: 600;
-        display: inline-block;
-        color:$white;
-        transition: 0.35s;
-        &:hover {
-            background-color: transparent;
-            color: $white;
-            border-bottom: 0.1rem solid $white;
-            opacity: 1;
-        }
+  a[rel="tag"] {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    margin: 0.5rem 1rem 0 0;
+    border-radius: 0;
+    text-decoration: none;
+    transition: 0.35s;
+    font-weight: 600;
+    display: inline-block;
+    color: $white;
+    transition: 0.35s;
+
+    &:hover {
+      background-color: transparent;
+      color: $white;
+      border-bottom: 0.1rem solid $white;
+      opacity: 1;
     }
   }
+}
 
 
-  /* CARRUSEL NOTICIAS */
+/* CARRUSEL NOTICIAS */
 
-  .owl-theme {
-    .owl-dots {
-      .owl-dot {
-        span {
-          border:0.1rem solid rgba(141, 141, 141, 0.544);
-          display: block !important;
-        } 
+.owl-theme {
+  .owl-dots {
+    .owl-dot {
+      span {
+        border: 0.1rem solid rgba(141, 141, 141, 0.544);
+        display: block !important;
       }
     }
   }
+}
 
 
-  .wp-block-noticias {
+.wp-block-noticias {
+  background-color: transparent !important;
+  width: 100% !important;
+  max-width: $max-width !important;
+
+  .owl-stage-outer {
+    padding: 2rem 0 !important;
+  }
+
+
+
+  .owl-item {
+    border: none !important;
     background-color: transparent !important;
-    width: 100% !important;
-    max-width:$max-width !important;
+    border: none !important;
 
-    .owl-stage-outer {
-      padding: 2rem 0 !important;
-    }
+    .entry-tarja {
+      position: relative;
+      padding-bottom: 100%;
+      transition: 0.35s;
 
+      .entry-link {
+        border-radius: 0.5rem;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 2;
 
-   
-    .owl-item {
-      border:none !important;
-      background-color: transparent !important;
-      border: none !important;
-      .entry-tarja {
-        position: relative;
+        &:hover {
+          background-color: #00000060;
+        }
+      }
+
+      .entry-image {
         padding-bottom: 100%;
-        transition:0.35s;
+        border-radius: 0.5rem;
+        background-color: transparent !important;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+      }
 
-        .entry-link {
-          border-radius: 0.5rem;
+      .entry-content {
+        border-radius: 0.5rem;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #00000030;
+
+        .entry-title {
+          z-index: 3;
           position: absolute;
-          top:0;
+          bottom: 0;
           left: 0;
           right: 0;
-          bottom: 0;
-          z-index: 2;
-          &:hover {
-            background-color: #00000060;
-          }
-        }
-
-        .entry-image {
-          padding-bottom: 100%;
+          top: 40%;
           border-radius: 0.5rem;
-          background-color: transparent !important;
-          position: absolute;
-          top:0;
-          left: 0;
-          right: 0;
-          bottom: 0;
+          display: flex;
+          align-self: flex-end;
+          color: $white !important;
+          padding: 3rem 1rem 0.75rem 1rem !important;
+          margin: 0 !important;
+          font-size: 1.2rem !important;
+          line-height: 125% !important;
+          background: linear-gradient(180deg, rgba(0, 133, 185, 0%) 0%, rgba(0, 0, 0, 0.503) 78%);
         }
+      }
+
+      &:hover {
+        scale: 105%;
+      }
+
+      &.publicaciones {
+        padding-bottom: 140% !important;
 
         .entry-content {
-          border-radius: 0.5rem;
-          position: absolute;
-          top:0;
-          left: 0;
-          right: 0;
-          bottom: 0;
-          background-color: #00000030;
+          display: flex;
+          padding: 0 !important;
+
           .entry-title {
-            z-index: 3;
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            top:40%;
-            border-radius: 0.5rem;
-            display: flex;
-            align-self: flex-end;
-            color:$white !important;
-            padding:3rem 1rem 0.75rem 1rem!important;
-            margin: 0 !important;
-            font-size: 1.2rem !important;
-            line-height: 125% !important;
-            background: linear-gradient(180deg, rgba(0, 133, 185, 0%) 0%, rgba(0, 0, 0, 0.503) 78%);
+            order: 2;
+            position: initial;
+            padding: 30% 1rem 1rem 1rem !important;
           }
-        }
-        &:hover {
-          scale: 105%;
-        }
 
-        &.publicaciones {
-          padding-bottom: 140% !important;
-          .entry-content {
-            display: flex;
-            padding: 0 !important;
-            .entry-title {
-              order:2;
-              position: initial;
-              padding: 30% 1rem 1rem 1rem !important;
-            }
-            .publicaciones-actions {
-              order:1;
-              position: inherit;
-              width: 100%;
-              z-index: 10;
-              margin-top: 1rem;
+          .publicaciones-actions {
+            order: 1;
+            position: inherit;
+            width: 100%;
+            z-index: 10;
+            margin-top: 1rem;
 
-              .btn-descargar {
-                cursor: pointer;
-                margin: 0.5rem 1rem .25rem 1rem !important;
-                border-radius: 1.5rem;
-                background-color: $white;
-                color:$primary;
-                font-weight: 500;
-                border: none;
-                @include font-size(10);
-                line-height: 100%;
-                padding: 0.5rem 1rem .4rem;
-                transition: 0.35rem;
-                &:hover {
-                  scale: 110%;
-                }
+            .btn-descargar {
+              cursor: pointer;
+              margin: 0.5rem 1rem .25rem 1rem !important;
+              border-radius: 1.5rem;
+              background-color: $white;
+              color: $primary;
+              font-weight: 500;
+              border: none;
+              @include font-size(10);
+              line-height: 100%;
+              padding: 0.5rem 1rem .4rem;
+              transition: 0.35rem;
+
+              &:hover {
+                scale: 110%;
               }
             }
           }
-          &:hover {
-            scale: 100%;
-          }
         }
-      }
-    }
-  }
 
-  /* MEDIA TEXT */
-
-
-  .media-text {
-
-    .wp-block-media-text__content {
-
-      p {
-        @include font-size(12);
-        line-height: 140%;
-      }
-
-      .wp-block-button {
-        border-radius: 1.5rem !important;
-        line-height: 100%;
-        &.is-style-button-icon-right {
-          a {
-            &:after {
-              background: url('../images/FLECHA_PRIMARY.svg') center no-repeat;
-            }
-          }
-        }
         &:hover {
-          background-color: $primary;
-          color:$white;
-          opacity: 100%;
-          &.is-style-button-icon-right {
-            &:after {
-              background: url('../images/FLECHA_WHITE.svg') center no-repeat;
-            }
+          scale: 100%;
+        }
+      }
+    }
+  }
+}
+
+/* MEDIA TEXT */
+
+
+.media-text {
+
+  .wp-block-media-text__content {
+
+    p {
+      @include font-size(12);
+      line-height: 140%;
+    }
+
+    .wp-block-button {
+      border-radius: 1.5rem !important;
+      line-height: 100%;
+
+      &.is-style-button-icon-right {
+        a {
+          &:after {
+            background: url('../images/FLECHA_PRIMARY.svg') center no-repeat;
+          }
+        }
+      }
+
+      &:hover {
+        background-color: $primary;
+        color: $white;
+        opacity: 100%;
+
+        &.is-style-button-icon-right {
+          &:after {
+            background: url('../images/FLECHA_WHITE.svg') center no-repeat;
           }
         }
       }
     }
   }
+}
 
-  /* DONACIONES */
+/* DONACIONES */
 
-  .wp-block-donaciones {
-    
-      button{
-        background: $primary;
-        border-radius: 1rem;
-        line-height: 100%;
-        color:$white;
-        padding: 0.5rem 1rem .45rem 1rem;
-        border: none;
-        a {
-          color:$white !important;
-          border:none !important;
-          text-decoration: none;
-          font-weight: 600;
-        }
-        &#show-more {
-          background: $white;
-          color:$primary;
-          padding: 0;
-          font-weight: 300;
-          width: 100%;
-          text-align: left;
-        }
-      }
-      p#porque {
-        text-align: left;
-        color:$primary;
-        font-size: 1rem;
-       
-      }
-      &.on {
-        // background-color: red;
-      }
+.wp-block-donaciones {
+
+  button {
+    background: $primary;
+    border-radius: 1rem;
+    line-height: 100%;
+    color: $white;
+    padding: 0.5rem 1rem .45rem 1rem;
+    border: none;
+
+    a {
+      color: $white !important;
+      border: none !important;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    &#show-more {
+      background: $white;
+      color: $primary;
+      padding: 0;
+      font-weight: 300;
+      width: 100%;
+      text-align: left;
+    }
   }
+
+  p#porque {
+    text-align: left;
+    color: $primary;
+    font-size: 1rem;
+
+  }
+
+  &.on {
+    // background-color: red;
+  }
+}
+
+/* ACORDIO */
+
+.llibres {
+  counter-reset: number;
+
+  .llibre {
+    position: relative;
+
+    .titol {
+      position: relative;
+      transform: rotate(-180deg);
+      line-height: 100%;
+      writing-mode: sideways-rl;
+      height: calc(100% - 2rem);
+
+      a {
+        max-height: 400px;
+        color: $white;
+
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+
+
+    &:after {
+      counter-increment: number;
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+      content: counter(number);
+      color: $white;
+      border-radius: 50%;
+
+      border: 0.5rem solid $white;
+      width: 3rem;
+      height: 3rem;
+      line-height: 3rem;
+      text-align: center;
+      font-weight: bold;
+      display: block;
+      font-size: 2.5rem;
+    }
+
+    .wp-block-post-featured-image,
+    .wp-block-post-excerpt__excerpt {
+      opacity: 0;
+      height: 0;
+      width: 0;
+      color: $white;
+    }
+  }
+
+  .hentry {
+    border-radius: 0.35rem !important;
+    overflow: hidden;
+    transition: 0.35s;
+
+    &:hover {
+      box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.30);
+      -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.30);
+      -moz-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.30);
+    }
+
+    &:nth-child(1) {
+      background-color: $colorCap1;
+
+    }
+
+    &:nth-child(2) {
+      background-color: $colorCap2;
+    }
+
+    &:nth-child(3) {
+      background-color: $colorCap3;
+    }
+
+    &:nth-child(4) {
+      background-color: $colorCap4;
+    }
+
+    &:nth-child(5) {
+      background-color: $colorCap5;
+    }
+
+    &:nth-child(6) {
+      background-color: $colorCap6;
+    }
+
+    &:nth-child(7) {
+      background-color: $colorCap7;
+    }
+
+  }
+
+  .ghub-query-accordion-active-item {
+    .llibre {
+      .titol {
+        transform: none;
+        padding: 1rem !important;
+        width: 100%;
+        writing-mode: horizontal-tb;
+      }
+    }
+
+    .wp-block-post-featured-image {
+      opacity: 1;
+      height: 100%;
+      width: 100%;
+    }
+
+    .wp-block-post-excerpt__excerpt {
+      opacity: 1;
+      width: 100%;
+      height: 2.5rem;
+    }
+  }
+}

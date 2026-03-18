@@ -1,14 +1,23 @@
+/* COLORS CAPITOLS */
 @media all and (device-width: 768px) and (device-height: 1024px) and (orientation: portrait) {
   .ipad-portrait {
     color: red;
-  } /* your css rules for ipad portrait */
+  }
+  /* your css rules for ipad portrait */
 }
 @media all and (device-width: 1024px) and (device-height: 768px) and (orientation: landscape) {
   .ipad-landscape {
     color: blue;
-  } /* your css rules for ipad landscape */
+  }
+  /* your css rules for ipad landscape */
 }
 /* REM FONT SIZE */
+.editor-styles-wrapper .editor-visual-editor.is-iframed {
+  background-color: var(--wp--preset--color--base);
+}
+.editor-styles-wrapper {
+  /* COLORS CAPITOLS */
+}
 @media all and (device-width: 768px) and (device-height: 1024px) and (orientation: portrait) {
   .editor-styles-wrapper .ipad-portrait {
     color: red;
@@ -843,6 +852,9 @@
 }
 .editor-styles-wrapper .wp-block-media-text {
   overflow: clip;
+}
+.editor-styles-wrapper {
+  /* COLORS CAPITOLS */
 }
 @media all and (device-width: 768px) and (device-height: 1024px) and (orientation: portrait) {
   .editor-styles-wrapper .ipad-portrait {
@@ -2652,6 +2664,9 @@
 .editor-styles-wrapper .animate__slideOutUp {
   animation-name: slideOutUp;
 }
+.editor-styles-wrapper {
+  /* COLORS CAPITOLS */
+}
 @media all and (device-width: 768px) and (device-height: 1024px) and (orientation: portrait) {
   .editor-styles-wrapper .ipad-portrait {
     color: red;
@@ -2842,6 +2857,9 @@
 }
 .editor-styles-wrapper .downloadPager .wp-block-button.hide {
   display: none;
+}
+.editor-styles-wrapper {
+  /* COLORS CAPITOLS */
 }
 @media all and (device-width: 768px) and (device-height: 1024px) and (orientation: portrait) {
   .editor-styles-wrapper .ipad-portrait {
@@ -3131,6 +3149,9 @@
 .editor-styles-wrapper footer.wp-block-template-part .Sub_Menus ul.wp-block-navigation__container li {
   width: 49%;
 }
+.editor-styles-wrapper {
+  /* COLORS CAPITOLS */
+}
 @media all and (device-width: 768px) and (device-height: 1024px) and (orientation: portrait) {
   .editor-styles-wrapper .ipad-portrait {
     color: red;
@@ -3213,6 +3234,9 @@
     font-size: 1.2rem;
   }
 }
+.editor-styles-wrapper {
+  /* COLORS CAPITOLS */
+}
 @media all and (device-width: 768px) and (device-height: 1024px) and (orientation: portrait) {
   .editor-styles-wrapper .ipad-portrait {
     color: red;
@@ -3243,6 +3267,9 @@
 }
 .editor-styles-wrapper .single main p > a:hover {
   border-bottom: 0.1rem solid #007FAD;
+}
+.editor-styles-wrapper {
+  /* COLORS CAPITOLS */
 }
 @media all and (device-width: 768px) and (device-height: 1024px) and (orientation: portrait) {
   .editor-styles-wrapper .ipad-portrait {
@@ -3298,6 +3325,9 @@
 }
 .editor-styles-wrapper .wp-block-categories-list .pds-terms-toggle[aria-expanded=true]:after {
   content: "-";
+}
+.editor-styles-wrapper {
+  /* COLORS CAPITOLS */
 }
 @media all and (device-width: 768px) and (device-height: 1024px) and (orientation: portrait) {
   .editor-styles-wrapper .ipad-portrait {
@@ -3643,6 +3673,9 @@
   .editor-styles-wrapper .ColumnRight .wp-block-column:last-child {
     order: 2;
   }
+}
+.editor-styles-wrapper {
+  /* COLORS CAPITOLS */
 }
 @media all and (device-width: 768px) and (device-height: 1024px) and (orientation: portrait) {
   .editor-styles-wrapper .ipad-portrait {
@@ -4134,6 +4167,103 @@
   color: #007FAD;
   font-size: 1rem;
 }
+.editor-styles-wrapper {
+  /* ACORDIO */
+}
+.editor-styles-wrapper .llibres {
+  counter-reset: number;
+}
+.editor-styles-wrapper .llibres .llibre {
+  position: relative;
+}
+.editor-styles-wrapper .llibres .llibre .titol {
+  position: relative;
+  transform: rotate(-180deg);
+  line-height: 100%;
+  writing-mode: sideways-rl;
+  height: calc(100% - 2rem);
+}
+.editor-styles-wrapper .llibres .llibre .titol a {
+  max-height: 400px;
+  color: #ffffff;
+}
+.editor-styles-wrapper .llibres .llibre .titol a:hover {
+  text-decoration: none;
+}
+.editor-styles-wrapper .llibres .llibre:after {
+  counter-increment: number;
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  content: counter(number);
+  color: #ffffff;
+  border-radius: 50%;
+  border: 0.5rem solid #ffffff;
+  width: 3rem;
+  height: 3rem;
+  line-height: 3rem;
+  text-align: center;
+  font-weight: bold;
+  display: block;
+  font-size: 2.5rem;
+}
+.editor-styles-wrapper .llibres .llibre .wp-block-post-featured-image,
+.editor-styles-wrapper .llibres .llibre .wp-block-post-excerpt__excerpt {
+  opacity: 0;
+  height: 0;
+  width: 0;
+  color: #ffffff;
+}
+.editor-styles-wrapper .llibres .hentry {
+  border-radius: 0.35rem !important;
+  overflow: hidden;
+  transition: 0.35s;
+}
+.editor-styles-wrapper .llibres .hentry:hover {
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+}
+.editor-styles-wrapper .llibres .hentry:nth-child(1) {
+  background-color: #BCA03F;
+}
+.editor-styles-wrapper .llibres .hentry:nth-child(2) {
+  background-color: #E57A42;
+}
+.editor-styles-wrapper .llibres .hentry:nth-child(3) {
+  background-color: #C74A49;
+}
+.editor-styles-wrapper .llibres .hentry:nth-child(4) {
+  background-color: #ACA4A9;
+}
+.editor-styles-wrapper .llibres .hentry:nth-child(5) {
+  background-color: #73A3C9;
+}
+.editor-styles-wrapper .llibres .hentry:nth-child(6) {
+  background-color: #6FBFAD;
+}
+.editor-styles-wrapper .llibres .hentry:nth-child(7) {
+  background-color: #6CB559;
+}
+.editor-styles-wrapper .llibres .ghub-query-accordion-active-item .llibre .titol {
+  transform: none;
+  padding: 1rem !important;
+  width: 100%;
+  writing-mode: horizontal-tb;
+}
+.editor-styles-wrapper .llibres .ghub-query-accordion-active-item .wp-block-post-featured-image {
+  opacity: 1;
+  height: 100%;
+  width: 100%;
+}
+.editor-styles-wrapper .llibres .ghub-query-accordion-active-item .wp-block-post-excerpt__excerpt {
+  opacity: 1;
+  width: 100%;
+  height: 2.5rem;
+}
+.editor-styles-wrapper {
+  /* COLORS CAPITOLS */
+}
 @media all and (device-width: 768px) and (device-height: 1024px) and (orientation: portrait) {
   .editor-styles-wrapper .ipad-portrait {
     color: red;
@@ -4276,6 +4406,9 @@
   padding-left: 1rem;
   margin-bottom: 4rem !important;
 }
+.editor-styles-wrapper {
+  /* COLORS CAPITOLS */
+}
 @media all and (device-width: 768px) and (device-height: 1024px) and (orientation: portrait) {
   .editor-styles-wrapper .ipad-portrait {
     color: red;
@@ -4333,6 +4466,9 @@
   color: #ffffff;
   background-color: #007FAD;
   padding-left: 0.75rem;
+}
+.editor-styles-wrapper {
+  /* COLORS CAPITOLS */
 }
 @media all and (device-width: 768px) and (device-height: 1024px) and (orientation: portrait) {
   .editor-styles-wrapper .ipad-portrait {
@@ -4518,6 +4654,9 @@
   align-items: center;
   gap: 1rem;
 }
+.editor-styles-wrapper {
+  /* COLORS CAPITOLS */
+}
 @media all and (device-width: 768px) and (device-height: 1024px) and (orientation: portrait) {
   .editor-styles-wrapper .ipad-portrait {
     color: red;
@@ -4558,6 +4697,9 @@
 }
 .editor-styles-wrapper .page-template-page-desnudos .desnudos .entry-header .entry-title {
   display: none;
+}
+.editor-styles-wrapper {
+  /* COLORS CAPITOLS */
 }
 @media all and (device-width: 768px) and (device-height: 1024px) and (orientation: portrait) {
   .editor-styles-wrapper .ipad-portrait {
@@ -4918,6 +5060,9 @@
     order: 2;
   }
 }
+.editor-styles-wrapper {
+  /* COLORS CAPITOLS */
+}
 @media all and (device-width: 768px) and (device-height: 1024px) and (orientation: portrait) {
   .editor-styles-wrapper .ipad-portrait {
     color: red;
@@ -5178,6 +5323,9 @@
 .editor-styles-wrapper .owl-theme .owl-dots .owl-dot.active span:hover {
   background-color: #2FA2B8 !important;
 }
+.editor-styles-wrapper {
+  /* COLORS CAPITOLS */
+}
 @media all and (device-width: 768px) and (device-height: 1024px) and (orientation: portrait) {
   .editor-styles-wrapper .ipad-portrait {
     color: red;
@@ -5270,6 +5418,9 @@
   height: 3rem;
   width: 1.5rem;
   display: block;
+}
+.editor-styles-wrapper {
+  /* COLORS CAPITOLS */
 }
 @media all and (device-width: 768px) and (device-height: 1024px) and (orientation: portrait) {
   .editor-styles-wrapper .ipad-portrait {
@@ -5500,6 +5651,9 @@
     padding: 2rem 2.5rem 0 0;
   }
 }
+.editor-styles-wrapper {
+  /* COLORS CAPITOLS */
+}
 @media all and (device-width: 768px) and (device-height: 1024px) and (orientation: portrait) {
   .editor-styles-wrapper .ipad-portrait {
     color: red;
@@ -5620,9 +5774,6 @@
 }
 .editor-styles-wrapper #myUL li a:hover {
   text-decoration: underline;
-}
-.editor-styles-wrapper {
-  background: #ffffff;
 }
 .editor-styles-wrapper a {
   text-decoration: none;

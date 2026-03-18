@@ -1,12 +1,23 @@
-$primary:#007FAD;
-$secondary:#2FA2B8;
-$tertiary:#FDF1E6;
-$quaternary:#E0F7FF;
-$CTA:#DD1115;
-$white:#ffffff;
-$black:#000000;
-$softblack:#343434;
-$gray:#9c9c9c;
+$primary: #007FAD;
+$secondary: #2FA2B8;
+$tertiary: #FDF1E6;
+$quaternary: #E0F7FF;
+$CTA: #DD1115;
+$white: #ffffff;
+$black: #000000;
+$softblack: #343434;
+$gray: #9c9c9c;
+
+
+/* COLORS CAPITOLS */
+
+$colorCap1: #BCA03F;
+$colorCap2: #E57A42;
+$colorCap3: #C74A49;
+$colorCap4: #ACA4A9;
+$colorCap5: #73A3C9;
+$colorCap6: #6FBFAD;
+$colorCap7: #6CB559;
 
 
 // BREAK POINTS
@@ -23,10 +34,19 @@ $max-width: 1420px; // $max-width: 100%;
 
 
 @media all and (device-width: 768px) and (device-height: 1024px) and (orientation:portrait) {
-  .ipad-portrait { color: red; } /* your css rules for ipad portrait */
+  .ipad-portrait {
+    color: red;
+  }
+
+  /* your css rules for ipad portrait */
 }
+
 @media all and (device-width: 1024px) and (device-height: 768px) and (orientation:landscape) {
-  .ipad-landscape { color: blue; } /* your css rules for ipad landscape */
+  .ipad-landscape {
+    color: blue;
+  }
+
+  /* your css rules for ipad landscape */
 }
 
 
@@ -81,7 +101,7 @@ $max-width: 1420px; // $max-width: 100%;
 
 /* REM FONT SIZE */
 
-@mixin font-size($sizeValue:1) {
+@mixin font-size($sizeValue: 1) {
   font-size: calc($sizeValue * 1) + px;
   font-size: calc($sizeValue / 10) + rem;
 }

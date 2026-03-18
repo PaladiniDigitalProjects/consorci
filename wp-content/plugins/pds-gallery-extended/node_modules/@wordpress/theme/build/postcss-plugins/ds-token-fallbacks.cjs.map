@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../src/postcss-plugins/ds-token-fallbacks.mjs"],
+  "sourcesContent": ["import _tokenFallbacks from '../prebuilt/js/design-token-fallbacks.mjs';\n\n/** @type {Record<string, string>} */\nconst tokenFallbacks = _tokenFallbacks;\n\n/**\n * Replace bare `var(--wpds-*)` references in a CSS value string with\n * `var(--wpds-*, <fallback>)` using the generated token fallback map.\n *\n * Existing fallbacks (i.e. var() calls that already contain a comma) are\n * left untouched, making the function safe to run multiple times.\n *\n * NOTE: The regex and replacement logic here mirrors `add-fallback-to-var.ts`.\n * If you update one, update the other to match.\n *\n * @param {string} cssValue A CSS declaration value.\n * @return {string} The value with fallbacks injected.\n */\nexport function addFallbackToVar( cssValue ) {\n\treturn cssValue.replace(\n\t\t/var\\(\\s*(--wpds-[\\w-]+)\\s*\\)/g,\n\t\t( match, tokenName ) => {\n\t\t\tconst fallback = tokenFallbacks[ tokenName ];\n\t\t\treturn fallback !== undefined\n\t\t\t\t? `var(${ tokenName }, ${ fallback })`\n\t\t\t\t: match;\n\t\t}\n\t);\n}\n"],
+  "mappings": ";;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA,oCAA4B;AAG5B,IAAM,iBAAiB,8BAAAA;AAehB,SAAS,iBAAkB,UAAW;AAC5C,SAAO,SAAS;AAAA,IACf;AAAA,IACA,CAAE,OAAO,cAAe;AACvB,YAAM,WAAW,eAAgB,SAAU;AAC3C,aAAO,aAAa,SACjB,OAAQ,SAAU,KAAM,QAAS,MACjC;AAAA,IACJ;AAAA,EACD;AACD;",
+  "names": ["_tokenFallbacks"]
+}

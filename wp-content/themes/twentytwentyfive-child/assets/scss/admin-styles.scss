@@ -2,6 +2,9 @@
 @use './variables' as *;
 
 .editor-styles-wrapper {
+  .editor-visual-editor.is-iframed {
+    background-color: var(--wp--preset--color--base);
+  }
 
   @include meta.load-css('./generics');
   @include meta.load-css('./header');
@@ -39,12 +42,6 @@
   // @include meta.load-css('./blocks/donaciones');
   // @include meta.load-css('./blocks/descargas');
   // @include meta.load-css('./blocks/redes-sociales');
-
-
-
-  // GENERIC
-  background: $white;
-  // border-top:1rem solid $primary;
 
   a {
     text-decoration: none;

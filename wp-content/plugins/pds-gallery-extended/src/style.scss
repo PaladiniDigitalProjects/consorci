@@ -1,0 +1,291 @@
+/* ═══════════════════════════════════════════════════════════════════
+   PDS Gallery Extended – Frontend styles
+═══════════════════════════════════════════════════════════════════ */
+
+/* ─── MASONRY ────────────────────────────────────────────────────── */
+figure.wp-block-gallery.pds-gallery--masonry {
+	display: block !important;
+	columns: 3 240px;
+	column-gap: 2rem;
+
+	> figure.wp-block-image {
+		break-inside: avoid;
+		display: block !important;
+		width: 100% !important;
+		max-width: none !important;
+		margin-bottom: 2rem;
+
+		img {
+			width: 100%;
+			height: auto !important;
+			display: block;
+		}
+	}
+
+	> ul { display: block !important; }
+
+	li.blocks-gallery-item {
+		break-inside: avoid;
+		display: block !important;
+		width: 100% !important;
+		margin-bottom: 2rem;
+
+		figure img { width: 100%; height: auto !important; }
+	}
+
+	@media ( max-width: 768px ) { columns: 2; }
+	@media ( max-width: 480px ) { columns: 1; }
+}
+
+/* ─── FILMSTRIP ──────────────────────────────────────────────────── */
+figure.wp-block-gallery.pds-gallery--filmstrip {
+	display: flex !important;
+	flex-wrap: nowrap !important;
+	overflow-x: auto;
+	align-items: center;
+	gap: 2rem;
+	-webkit-overflow-scrolling: touch;
+	scrollbar-width: thin;
+	scrollbar-color: rgba( 0, 0, 0, 0.2 ) transparent;
+
+	&::-webkit-scrollbar       { height: 4px; }
+	&::-webkit-scrollbar-thumb { background: rgba( 0, 0, 0, 0.2 ); border-radius: 2px; }
+
+	> figure.wp-block-image {
+		flex: 0 0 auto !important;
+		width: auto !important;
+		height: 280px;
+
+		img {
+			height: 100% !important;
+			width: auto !important;
+			max-width: none !important;
+			object-fit: cover;
+			display: block;
+		}
+	}
+
+	> ul {
+		display: flex !important;
+		flex-wrap: nowrap !important;
+		gap: 2rem;
+		width: max-content;
+	}
+
+	li.blocks-gallery-item {
+		flex: 0 0 auto !important;
+		width: auto !important;
+
+		figure { height: 280px; }
+
+		img {
+			height: 100% !important;
+			width: auto !important;
+			max-width: none !important;
+			object-fit: cover;
+		}
+	}
+}
+
+/* ─── FOCAL — 2 files animades a l'horitzó ───────────────────────── */
+/*
+ * JS divideix les imatges en 2 files i les anima en horitzontal.
+ * Fila 1 → esquerra · Fila 2 → dreta.
+ */
+figure.wp-block-gallery.pds-gallery--focal {
+	display: block !important;
+	overflow: visible !important;
+
+	.pds-focal-row {
+		overflow: hidden;
+	}
+
+	/* El runner és el que s'anima amb translateX */
+	.pds-focal-runner {
+		display: flex;
+		flex-wrap: nowrap;
+		will-change: transform;
+	}
+
+	/* Cada còpia de les imatges */
+	.pds-focal-inner {
+		display: flex;
+		flex-wrap: nowrap;
+		flex-shrink: 0;
+		align-items: var( --pds-focal-align, center );
+		gap: 2rem;
+		padding-right: 2rem;  /* igual al gap → seamless loop */
+
+		figure.wp-block-image,
+		li.blocks-gallery-item {
+			flex: 0 0 auto;
+			width: auto !important;
+			max-width: none !important;
+
+			img {
+				display: block;
+				width: auto !important;
+				height: auto !important;
+				max-width: none !important;
+				max-height: var( --pds-focal-max-height, 400px );
+			}
+		}
+	}
+}
+
+/* ─── AUTO-SCROLL ────────────────────────────────────────────────── */
+figure.wp-block-gallery.pds-gallery--autoscroll {
+	overflow: hidden !important;
+	display: block !important;
+
+	/* El runner és el que s'anima */
+	.pds-scroll-runner {
+		display: flex;
+		flex-wrap: nowrap;
+		will-change: transform;
+	}
+
+	/* Cada còpia del contingut */
+	.pds-scroll-inner {
+		display: flex !important;
+		flex-wrap: nowrap !important;
+		flex-shrink: 0;
+		align-items: center;
+		gap: 2rem;
+		padding-right: 2rem; /* seamless loop */
+
+		figure.wp-block-image {
+			flex: 0 0 auto !important;
+			width: auto !important;
+			height: 280px;
+
+			img {
+				height: 100% !important;
+				width: auto !important;
+				max-width: none !important;
+				object-fit: cover;
+				display: block;
+			}
+		}
+
+		li.blocks-gallery-item {
+			flex: 0 0 auto !important;
+			width: auto !important;
+
+			figure { height: 280px; }
+
+			img {
+				height: 100% !important;
+				width: auto !important;
+				max-width: none !important;
+				object-fit: cover;
+			}
+		}
+	}
+}
+
+/* ─── Amagar figcaption a la galeria quan hi ha lightbox ─────────── */
+figure.wp-block-gallery.pds-gallery--lightbox {
+	figcaption { display: none; }
+}
+
+/* ─── LIGHTBOX ───────────────────────────────────────────────────── */
+.pds-lightbox {
+	display: none;
+	position: fixed;
+	inset: 0;
+	z-index: 999999;
+	align-items: center;
+	justify-content: center;
+
+	&.is-open { display: flex; }
+
+	.pds-lb-backdrop {
+		position: absolute;
+		inset: 0;
+		background: rgba( 0, 0, 0, 0.30 );
+		cursor: zoom-out;
+	}
+
+	.pds-lb-stage {
+		position: relative;
+		z-index: 1;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		max-width: 90vw;
+	}
+
+	.pds-lb-img-wrap {
+		max-width: 90vw;
+		max-height: 90vh;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.pds-lb-img {
+		max-width: 90vw;
+		max-height: 90vh;
+		width: auto;
+		height: auto;
+		object-fit: contain;
+		display: block;
+		transition: opacity 0.2s ease;
+	}
+
+	.pds-lb-caption {
+		color: rgba( 46, 66, 251, 0.80 );
+		font-size: 0.875rem;
+		margin: 12px 0 0;
+		text-align: center;
+		min-height: 1em;
+	}
+
+	.pds-lb-counter {
+		color: rgba( 255, 255, 255, 0.35 );
+		font-size: 0.75rem;
+		margin: 4px 0 0;
+		text-align: center;
+	}
+
+	button {
+		background: none;
+		border: none;
+		color: #fff;
+		cursor: pointer;
+		font-size: 2rem;
+		line-height: 1;
+		padding: 8px 16px;
+		transition: opacity 0.15s;
+
+		&:hover { opacity: 0.65; }
+	}
+
+	.pds-lb-close {
+		position: fixed;
+		top: 16px;
+		right: 20px;
+		font-size: 2.8rem;
+		z-index: 2;
+		line-height: 1;
+	}
+
+	.pds-lb-prev,
+	.pds-lb-next {
+		position: fixed;
+		top: 50%;
+		transform: translateY( -50% );
+		font-size: 3rem;
+		z-index: 2;
+		padding: 20px 24px;
+	}
+
+	.pds-lb-prev { left: 8px; }
+	.pds-lb-next { right: 8px; }
+
+	@media ( max-width: 600px ) {
+		.pds-lb-prev { left: 0; }
+		.pds-lb-next { right: 0; }
+	}
+}
