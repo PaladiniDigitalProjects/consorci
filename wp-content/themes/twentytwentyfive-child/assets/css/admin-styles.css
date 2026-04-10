@@ -42,6 +42,12 @@
   --wp--style--root--padding-top: 0;
   --wp--style--root--padding-bottom: 0;
   --wp--preset--font-family--suisse-intl: var(--wp--preset--font-family--bw-fusiona-demo);
+  --wp--style--root--padding-right: 0;
+  --wp--style--root--padding-left: 0;
+}
+.editor-styles-wrapper .has-global-padding {
+  padding-right: 0 !important;
+  padding-left: 0 !important;
 }
 .editor-styles-wrapper * {
   scrollbar-width: thin;
@@ -4168,33 +4174,65 @@
   font-size: 1rem;
 }
 .editor-styles-wrapper {
+  /* DESTACAT */
+}
+.editor-styles-wrapper .destacado-home {
+  top: 10rem;
+}
+@media only screen and (min-width: 1024px) {
+  .editor-styles-wrapper .destacado-home {
+    top: -2rem;
+  }
+}
+.editor-styles-wrapper {
   /* ACORDIO */
 }
-.editor-styles-wrapper .llibres {
+.editor-styles-wrapper .llibres .ghub-query-accordion-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+}
+.editor-styles-wrapper .llibres .ghub-query-accordion-container .ghub-query-accordion-item-container {
+  min-height: 5rem;
+}
+.editor-styles-wrapper .llibres .ghub-query-accordion-container .ghub-query-accordion-item-container.ghub-query-accordion-active-item {
+  min-height: 20rem;
+}
+@media only screen and (min-width: 1024px) {
+  .editor-styles-wrapper .llibres .ghub-query-accordion-container {
+    flex-direction: row;
+  }
+}
+.editor-styles-wrapper .llibres .ghub-query-accordion-container {
   counter-reset: number;
 }
-.editor-styles-wrapper .llibres .llibre {
+.editor-styles-wrapper .llibres .ghub-query-accordion-container .llibre {
   position: relative;
+  width: 100%;
 }
-.editor-styles-wrapper .llibres .llibre .titol {
+.editor-styles-wrapper .llibres .ghub-query-accordion-container .llibre .titol {
   position: relative;
-  transform: rotate(-180deg);
-  line-height: 100%;
-  writing-mode: sideways-rl;
-  height: calc(100% - 2rem);
+  padding-left: 6rem !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
 }
-.editor-styles-wrapper .llibres .llibre .titol a {
-  max-height: 400px;
+.editor-styles-wrapper .llibres .ghub-query-accordion-container .llibre .titol a {
   color: #ffffff;
+  font-size: 15px;
+  font-size: 1.5rem;
+  line-height: 100%;
+  padding: 0.5rem 0 0 0;
 }
-.editor-styles-wrapper .llibres .llibre .titol a:hover {
+.editor-styles-wrapper .llibres .ghub-query-accordion-container .llibre .titol a:hover {
   text-decoration: none;
 }
-.editor-styles-wrapper .llibres .llibre:after {
+.editor-styles-wrapper .llibres .ghub-query-accordion-container .llibre:after {
   counter-increment: number;
   position: absolute;
-  top: 1rem;
-  left: 1rem;
+  top: 0.5rem;
+  left: 0.5rem;
+  bottom: 0.5rem;
   content: counter(number);
   color: #ffffff;
   border-radius: 50%;
@@ -4207,56 +4245,77 @@
   display: block;
   font-size: 2.5rem;
 }
-.editor-styles-wrapper .llibres .llibre .wp-block-post-featured-image,
-.editor-styles-wrapper .llibres .llibre .wp-block-post-excerpt__excerpt {
+.editor-styles-wrapper .llibres .ghub-query-accordion-container .llibre .wp-block-post-featured-image,
+.editor-styles-wrapper .llibres .ghub-query-accordion-container .llibre .wp-block-post-excerpt__excerpt {
   opacity: 0;
   height: 0;
   width: 0;
   color: #ffffff;
 }
-.editor-styles-wrapper .llibres .hentry {
+@media only screen and (min-width: 1024px) {
+  .editor-styles-wrapper .llibres .ghub-query-accordion-container .llibre:after {
+    top: 1rem;
+    left: 1.25rem;
+    bottom: 1rem;
+  }
+  .editor-styles-wrapper .llibres .ghub-query-accordion-container .llibre .titol {
+    position: relative;
+    transform: rotate(-180deg);
+    line-height: 100%;
+    writing-mode: sideways-rl;
+    height: calc(100% - 2rem);
+  }
+  .editor-styles-wrapper .llibres .ghub-query-accordion-container .llibre .titol a {
+    max-height: 400px;
+    font-size: 20px;
+    font-size: 2rem;
+    line-height: 120%;
+    padding: 0;
+  }
+}
+.editor-styles-wrapper .llibres .ghub-query-accordion-container .hentry {
   border-radius: 0.35rem !important;
   overflow: hidden;
   transition: 0.35s;
 }
-.editor-styles-wrapper .llibres .hentry:hover {
+.editor-styles-wrapper .llibres .ghub-query-accordion-container .hentry:hover {
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
   -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
   -moz-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
 }
-.editor-styles-wrapper .llibres .hentry:nth-child(1) {
+.editor-styles-wrapper .llibres .ghub-query-accordion-container .hentry:nth-child(1) {
   background-color: #BCA03F;
 }
-.editor-styles-wrapper .llibres .hentry:nth-child(2) {
+.editor-styles-wrapper .llibres .ghub-query-accordion-container .hentry:nth-child(2) {
   background-color: #E57A42;
 }
-.editor-styles-wrapper .llibres .hentry:nth-child(3) {
+.editor-styles-wrapper .llibres .ghub-query-accordion-container .hentry:nth-child(3) {
   background-color: #C74A49;
 }
-.editor-styles-wrapper .llibres .hentry:nth-child(4) {
+.editor-styles-wrapper .llibres .ghub-query-accordion-container .hentry:nth-child(4) {
   background-color: #ACA4A9;
 }
-.editor-styles-wrapper .llibres .hentry:nth-child(5) {
+.editor-styles-wrapper .llibres .ghub-query-accordion-container .hentry:nth-child(5) {
   background-color: #73A3C9;
 }
-.editor-styles-wrapper .llibres .hentry:nth-child(6) {
+.editor-styles-wrapper .llibres .ghub-query-accordion-container .hentry:nth-child(6) {
   background-color: #6FBFAD;
 }
-.editor-styles-wrapper .llibres .hentry:nth-child(7) {
+.editor-styles-wrapper .llibres .ghub-query-accordion-container .hentry:nth-child(7) {
   background-color: #6CB559;
 }
-.editor-styles-wrapper .llibres .ghub-query-accordion-active-item .llibre .titol {
+.editor-styles-wrapper .llibres .ghub-query-accordion-container .ghub-query-accordion-active-item .llibre .titol {
   transform: none;
   padding: 1rem !important;
   width: 100%;
   writing-mode: horizontal-tb;
 }
-.editor-styles-wrapper .llibres .ghub-query-accordion-active-item .wp-block-post-featured-image {
+.editor-styles-wrapper .llibres .ghub-query-accordion-container .ghub-query-accordion-active-item .wp-block-post-featured-image {
   opacity: 1;
   height: 100%;
   width: 100%;
 }
-.editor-styles-wrapper .llibres .ghub-query-accordion-active-item .wp-block-post-excerpt__excerpt {
+.editor-styles-wrapper .llibres .ghub-query-accordion-container .ghub-query-accordion-active-item .wp-block-post-excerpt__excerpt {
   opacity: 1;
   width: 100%;
   height: 2.5rem;

@@ -225,6 +225,6 @@ class __TwigTemplate_80aece9693bf2f3ef274ca711d33a5622e815241cc172b3824bb4ab1cb0
 
 \t</ul>
 </div>
-", "template.twig", "/app/wp-content/plugins/sitepress-multilingual-cms/templates/language-switchers/legacy-list-horizontal/template.twig");
+", "template.twig", "/home/customer/www/consorci.paladinidigital.com/public_html/wp-content/plugins/sitepress-multilingual-cms/templates/language-switchers/legacy-list-horizontal/template.twig");
     }
 }
